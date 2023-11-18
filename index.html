@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Space Mark</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body id="top">
+
+  <div id="menu-icon">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  
+  <div id="background-layer"></div>
+  <div id="left-sidebar">
+    <p class="indent-4">Contents</p>
+    <p class="indent-4"><a href="#top">Top</a></p>
+    <p class="indent-0"><a href="#Philosophy">💡 Philosophical Reflections</a></p>
+    <p class="indent-0"><a href="#chapter1">Chapter 1 Project Overview</a></p>
+    
+    <p><span class="caret">&#9660;</span><span class="inline indent-0"><a href="#chapter2">Chapter 2 Background and Motivation</a></span></p>
+    <div class="sub-section">
+        <p class="indent-4"><a href="#2-1">2.1 Background Introduction</a></p>
+        <p class="indent-4"><a href="#2-2">2.2 Inspiration Source</a></p>
+        <p class="indent-4"><a href="#2-3">2.3 Explanation of Technical Choices</a></p>
+        <p class="indent-4"><a href="#2-4">2.4 Target Setting</a></p>
+    </div>
+    
+    <p><span class="caret">&#9660;</span><span class="inline indent-0"><a href="#chapter3">Chapter 3 Prototype Design and Development</a></span></p>
+    <div class="sub-section">
+        <p class="indent-4"><a href="#3-1">3.1 System Architecture</a></p>
+        <p class="indent-4"><a href="#3-2">3.2 System Flowchart</a></p>
+        <p class="indent-4"><a href="#3-3">3.3 Video Processing Logic📍</a></p>
+        <p class="indent-4"><a href="#3-4">3.4 Interactive Prototype Demonstration</a></p>
+        <p class="indent-4"><a href="#3-5">3.5 The Most Challenging Problem and Solutions📍</a></p>
+        <p class="indent-4"><a href="#3-6">3.6 Program Features and Advantages</a></p>
+    </div>
+    
+    <p class="indent-0"><a href="#chapter4">Chapter 4 Future Directions</a></p>
+
+    <p class="indent-0"><a href="#chapter5">Chapter 5 Future Integration Application Scenario Storyboarding</a></p>
+    
+    <p><span class="caret">&#9660;</span><span class="inline indent-0"><a href="#chapter6">Chapter 6 Project Conclusions and Reflections</a></span></p>
+    <div class="sub-section">
+        <p class="indent-4"><a href="#6-1">6.1 Complete Development Log: Challenges and Resolutions</a></p>
+        <p class="indent-4"><a href="#6-2">6.2 Self-Learning in Interactive Media Technology and Video Processing</a></p>
+    </div>
+
+    <p><span class="caret">&#9660;</span><span class="inline indent-0"><a href="#chapter7">Chapter 7 Technical Implementation and Program Module Exhibition</a></span></p>
+    <div class="sub-section">
+        <p class="indent-4"><a href="#7-1">7.1 GUI Code Structure</a></p>
+        <p class="indent-4"><a href="#7-2">7.2 Configuration File Code Structure</a></p>
+        <p class="indent-4"><a href="#7-3">7.3 Image_Recognition Code Structure</a></p>
+        <p class="indent-4"><a href="#7-4">7.4 Main Code Structure</a></p>
+        <p class="indent-4"><a href="#7-5">7.5 Video Frame Annotation with Direction and Tilt Data Code Structure</a></p>
+        <p class="indent-4"><a href="#7-6">7.6 Image Analysis for Endpoint Detection and Direction Computation Code Structure</a></p>
+    </div>
+  
+    <p class="indent-0"><a href="#chapter8">Chapter 8 Thank you for viewing!💐 & Connect</a></p>   
+
+    <!-- 这是一个HTML注释，用于标识右边的主体部分开始 -->
+</div>
+
+<div id="main-content">
+    <h1 id="main-title">Space Mark: First-Person Shooter (FPS) Game-Inspired AR Navigation Prototype Based on Pre-recorded Video Processing</h1>
+    <p class="sub-title">by Xuewen Zhao</p>
+
+    <ul>
+        <li><strong>Date:</strong> March 1, 2023 to July 15, 2023<br>(The project completion date refers to when the main work was finished. Subsequent organization and presentation design for application purposes are additional steps and not included in the original completion timeline.)</li>
+        <li><strong>Medium:</strong> Software Prototype with GUI, Focused on Interactive Media Technology and Advanced Video Processing (including OCR text recognition and analysis, OpenCV image processing, data analysis and application, and content-aware graphic overlay)</li>
+        <li><strong>Role:</strong> Sole Creator (project completion and presentation production)</li>
+        <li><strong>Additional Information:</strong><br> This website is designed with a responsive layout for desktop use, created by me using HTML, CSS, and JavaScript. <br>
+            I integrated AI-assisted programming within modular development to enhance development efficiency.</li>
+        <li><strong>GitHub repository:</strong> <a href="https://github.com/Sheron-Xuewen/Spacemark_2023">github.com/Sheron-Xuewen/Spacemark_2023</a></li>
+
+    </ul>
+
+    <p class="sub-title">A 30-Second Preview ▼</p>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/igMGpM0iEaM?si=rpjPBpx5-3-1lukc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <p class="sub-title">To view the Interactive Prototype Demonstration, please refer to <b><I>Chapter 3, Section 4</I></b>.</p>
+    <div class="box017">
+    <h2 class="sub-title">AI Usage Statement:<br>Integrating AI-Assisted Programming in Modular Development</h2>
+    <p class="text-content">
+        🧩 After I finished the layout of the fundamental framework, I divided the program into small modules, then used AI-assisted programming to quick generate code for each module. Then put them collectively, just like putting together a puzzle. I provide descriptions and make adjustments to the code generated by AI, repeatedly testing until the task is accurately completed. It saved me a lot of time and energy, and allowed me to focus on the core task of my project.<br><br>
+        📄Please view the detailed error log and solutions during program development in <b><I>Chapter 3, Section 5</I></b> & <b><I>Chapter 6, Section 1</I></b>.<br><br>
+        🔍 Please refer to <b><I>Chapter 7</I></b> to see how I specifically discuss the division of programs into modules. <br><br>
+        If there's any doubt, I'll be happy to clarify.
+    </p>
+    </div>
+</div>
+<hr>
+<div id="main-content">   
+    <!-- 这是一个HTML注释，用于标识哲思 -->
+    <div id="Philosophy">
+    <h2 class="sub-title">💡 Philosophical Reflections</h2>
+    <div class="box019">            
+<p><b>🧠 Philosophical Exploration of Gaming as a Reflection on Human Experience</b><br><br>
+    Games in our daily life are more than just entertainment, they in a broad sense are a kind of transcendence of the instinct of life and death. In this virtual realm, players can experience a concept of life and death that is completely different from reality, in which "death" is no longer the end, but a part of the game process.<br><br>
+    Although this experience takes place in a fictional environment, it is a real emotional experience for the player. Besides, the actual passage of time also provides legitimacy to this sense of reality. Games provide a spacetime for psychological release. They to a certain extent allow players to get rid of the fundamental fear of death temporarily and experience a kind of free and unrestrained behavior. These unrestrained behaviors may be aimless, and even have Chaos and randomness to some degree.<br><br>
+    However, this sense of freedom and relief gained in the game is not endless. There is a fundamental difference between the experience in the game and real life. Games only provide a simulated and symbolic experience. Although the gaming experience itself is real, it's still limited within a set, bounded environment, which may be qualitatively different compared to real-life experiences.<br><br>
+    In any case, the value of games goes far beyond pure entertainment. It plays an important role in helping us understand the real world and human experience, always enriching the texture of senses and experiences in unexpected ways.<br><br>
+</p>
+    </div>  
+    <div class="box020">            
+<p><b>🌍 AR Brings the Possibility of Integrating Games into Life</b><br><br>           
+    Augmented reality (AR) technology makes gaming experience no longer limited to virtual space. It brings the interactivity of games into the real world, what can blur the boundaries between games and daily life. Through AR, the transcendence of games can be reflected in our real-life.
+</p>
+    </div>  
+    <div class="box021">
+<p><b>🚀 Conceptualization of the Project</b><br><br>         
+    My project applies the concept of FPS games to real-world navigation. This innovation improves the intuitiveness of navigation tools, increases the fun of interaction, and integrating gaming and reality. Users gain a new experience through this navigation, which integrates instant feedback and target positioning in the game into daily life, breaking the isolation between games and real life.
+</p>
+    </div>
+    </div>
+</div>
+
+<hr>
+<div id="main-content">   
+    <!-- 这是一个HTML注释，用于标识项目概况 -->
+    <div id="chapter1">
+    <h2 class="sub-title">1 Project Overview</h2>
+    <div class="text-content two-column">    
+        In First-Person Shooter (FPS) games, players often rely on crosshairs to quickly aim at their targets. This instantaneous visual feedback inspired me to think about how to combine this concept with AR navigation applications. Based on this, I designed and implemented a basic prototype—a GUI dedicated to processing pre-recorded videos. This tool can parse user-uploaded video frames, making judgments about direction, device tilt, day or night status, and overlays navigational crosshairs and other graphics accordingly. It also allows users to upload custom images and text to mark destinations, providing clear navigational instructions for the users. Once processing is complete, users can download and view the simulated AR navigation effect video. This is my preliminary foray into the realm of AR navigation, aiming to lay the foundation for future potential application development. 
+    </div>
+    <h2 class="second-sub-title">Core functions</h2>
+    <p class="text-content"> 
+        <div class="box09">
+        Users can set the relative direction of the destination and customize images and text labels. The display of labels, crosshairs, and arrows helps users locate their set destinations.</div></p>
+    <h2 class="second-sub-title">Feature Highlights</h2>    
+    <p class="text-content">
+        <div class="box01">
+        ①🎯 Targeted Navigation Marking: <br>
+        Guide users to their destination in an intuitive manner, ensure fast and accurate positioning.
+        </div>
+        <div class="box02">
+        ②🔖 Customizable Labels and Annotations: <br>
+        Allow users to upload custom navigation labels or marks to provide personalized information for specific directions or locations.</div>
+        <div class="box03">
+        ③🔄 Video Content-Based Graphical Overlay:<br>Automatically adjust navigational elements based on video content, such as direction, day or night, and device tilt.</div></p>
+    </div>
+</div>
+
+<hr>
+<div id="main-content">   
+    <!-- 这是一个HTML注释，用于标识2 -->
+    <div id="chapter2">
+        <h2 class="sub-title">2 Background and Motivation</h2>
+        <div id="2-1">
+            <h2 class="second-sub-title">2.1 Background Introduction</h2>
+            <div class="text-content two-column">
+                <b>Navigation challenges and Demands:</b><br>
+In today's rapidly advancing society, navigation has become an indispensable part of our daily lives. Whether on busy urban roads or in complex indoor environments, an effective navigation tool can help users reach their destinations more efficiently and accurately. Especially in today's era of information explosion, people expect an instant and intuitive navigation experience. The traditional 2D map interface may no longer be able to meet these needs in some scenarios. Therefore, how to provide users with a more intuitive and immersive navigation experience has become an urgent issue.<br><br>
+<b>The Potential of Augmented Reality (AR) Applications:</b><br>
+To address this issue, technology experts began looking for more advanced and intuitive solutions. AR provides a new interaction layer to the real world, allowing digital information to be integrated with the actual environment. This opens up the possibility of creating a new, more immersive navigation experience.
+            </div>
+        </div>   
+        <br>
+        <div id="2-2">
+            <h2 class="second-sub-title">2.2 Inspiration Source</h2>
+            <div class="text-content two-column">
+                In many first-person shooter (FPS) games, the crosshairs play a key role, providing players with intuitive feedback and precise target positioning. This instant visual feedback in games reminds me of the real-life navigation experience. Especially in complex environments, having an intuitive and responsive navigation assistant could be extremely beneficial. This instant feedback and intuitive guidance inspired me to combine the crosshair concept from FPS games with an AR navigation application to create this prototype.
+            </div>
+            <p><b>2.2.1▼ Research of The Evolution of Crosshair Design in First-Person Shooter Games</b></p>
+            <table>
+                <tr>
+                  <th>Stage</th>
+                  <th>Example Game</th>
+                  <th>Changes in Crosshair Design</th>
+                  <th>Features</th>
+                  <th>Impact on Player Experience</th>
+                  <th>Resources</th>
+                </tr>
+                <tr>
+                    <td>First Stage - Early Simple Crosshairs</td>
+                    <td>Doom (1993), Goldeneye (1997)</td>
+                    <td>In this stage, many games did not even have crosshairs.</td>
+                    <td>Early FPS games typically lacked crosshairs or had very basic crosshair designs, such as a simple dot or cross.</td>
+                    <td>The absence of crosshairs could make aiming difficult, especially for new players, limiting the playability and precision of the players.</td>
+                    <td>
+                        <a href="https://doomwiki.org/wiki/Crosshair" target="_blank">Doom Wiki: Crosshair</a> - Describes how the original Doom game used the player's weapon centered on the screen as the sole aiming indicator.<br>
+                        <a href="https://doom.fandom.com/wiki/Crosshairs" target="_blank">Doom Fandom: Crosshairs</a> - Discusses the lack of crosshairs in the early Doom games.<br>
+                        <a href="https://jamesbond.fandom.com/wiki/GoldenEye_007_(1997_game)" target="_blank">James Bond Wiki: GoldenEye 007</a> - Explains the use of a red crosshair for aiming in the game Goldeneye 007.
+                        </td>
+                </tr>
+                <tr>
+                    <td>Second Stage - Controller Optimization</td>
+                    <td>Halo, Unreal Tournament</td>
+                    <td>To adapt to game controllers, game designers began optimizing crosshair design to enable players to aim more easily and accurately.</td>
+                    <td>Controller optimization was designed to provide players with similar accuracy and responsiveness as using a mouse and keyboard when using game controllers. For example, by accelerating yaw speed, players could quickly turn when needed while maintaining precise aiming.</td>
+                    <td>The optimized control enabled players to aim and shoot more easily and accurately, enhancing the gaming experience.</td>
+                    <td>
+                        <a href="https://tweakguides.pcgamingwiki.com/UT2004_3.html" target="_blank">Unreal Tournament 2004 Tweak Guide</a> - Discusses the option of custom weapon crosshairs in the game, allowing players to use different crosshair styles for each weapon.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Third Stage - Advancements in 3D Graphics Technology</td>
+                    <td>Quake (1996), Half-Life (1998)</td>
+                    <td>With the advancement in 3D graphics technology, crosshairs began to have more dimensions and dynamic effects, offering players more intuitive targeting indicators and feedback.</td>
+                    <td>3D graphics technology not only made the game worlds more realistic but also led to more advanced and dynamic crosshair designs. Quake was the first FPS game to use a true 3D engine, introducing more complex crosshair designs that better reflected the dynamic changes in the game.</td>
+                    <td>The advanced crosshair designs made it easier for players to judge the position and distance of targets, enriching and enhancing the gaming experience.</td>
+                    <td>
+                        <a href="https://en.wikipedia.org/wiki/Quake_(video_game)" target="_blank">Quake (video game) - Wikipedia</a> - Provides comprehensive information about Quake, including its development, technological innovations, and influence on the gaming industry.<br>
+                        <a href="https://en.wikipedia.org/wiki/Half-Life_(video_game)" target="_blank">Half-Life (video game) - Wikipedia</a> - Offers detailed insights into Half-Life, covering aspects of its development, game mechanics, and technological advancements.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fourth Stage - Player Experience and Game Pacing Considerations</td>
+                    <td>Wolfenstein 3D (1992)</td>
+                    <td>As the pace of games increased, crosshair designs became more streamlined and intuitive to help players quickly locate targets.</td>
+                    <td>In the early 90s, FPS games' pace noticeably accelerated. In Wolfenstein 3D, the fast pace forced players to remain vigilant against enemies, and crosshair designs began to focus on aiding players in aiming more quickly and accurately.</td>
+                    <td>The fast-paced games and streamlined, intuitive crosshair designs allowed players to be more immersed in the game, enjoying a more intense and thrilling experience.</td>
+                    <td><a href="https://www.dhgate.com/blog/the-history-of-crosshairs-how-this-aiming-tool-has-evolved-over-time-c/" target="_blank">The History of Crosshairs: How This Aiming Tool Has Evolved</a> - An article detailing the evolution of crosshair design.                  
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fifth Stage - Testing and Optimization</td>
+                    <td>Various VR Games</td>
+                    <td>Crosshair designs began to consider how to depict different depths of crosshairs based on changes in players' focus.</td>
+                    <td>Game developers started to test and optimize crosshair designs to make them more user-friendly and helpful for players.</td>
+                    <td>The optimization of crosshair designs made it easier for players to aim at targets, thus enhancing the playability and satisfaction of the game.</td>
+                    <td><a href="https://forum.unity.com/threads/released-world-space-crosshair-3d-crosshair-necessary-for-vr.435703/" target="_blank">Unity Forum: World Space Crosshair - 3D crosshair (necessary for VR!)</a> - Describes the development of a 3D crosshair in world space, necessary for VR environments, highlighting the shift from traditional 2D screen space crosshairs.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sixth Stage - Evolution of UI/UX Design</td>
+                    <td>The Witcher 3: Wild Hunt, The Last of Us Part II</td>
+                    <td>Crosshair designs began to be integrated into the game's UI/UX design, offering a richer and more intuitive user experience.</td>
+                    <td>As game interfaces and user experience designs continually evolved, crosshair designs also became more advanced and personalized to meet the diverse needs and preferences of players.</td>
+                    <td>The optimization of crosshair designs helps players better understand and master the game, thus enhancing its playability and player satisfaction.</td>
+                    <td>
+<a href="https://www.interfaceingame.com/games/the-last-of-us-part-ii/" target="_blank">The Last of Us Part II | Interface In Game</a> - Showcases part of the user interface of The Last of Us Part II, including crosshair designs.<br>
+<a href="https://www.gameuidatabase.com/gameData.php?id=290" target="_blank">The Witcher 3: Wild Hunt | Game UI Database</a> - Provides a comprehensive overview of the game's UI, including screenshots and detailed descriptions of various interface components.                                          
+                    </td>
+                </tr>
+                <tr>
+                    <td>Seventh Stage - Player Community Feedback</td>
+                    <td>Call of Duty series, Battlefield series</td>
+                    <td>Based on player community feedback, crosshair designs started to become more diverse and personalized.</td>
+                    <td>Game developers began to pay more attention to player community feedback, improving and optimizing crosshair designs to better suit players' needs and preferences.</td>
+                    <td>By integrating player community feedback, crosshair designs became more user-friendly, thereby enhancing the playability and satisfaction of the game.</td>
+                    <td><a href="https://www.mp1st.com/news/battlefield-2042-crosshairs-kill-hit-indicators-options-to-customize-confirmed" target="_blank">Battlefield 2042 Crosshairs, Kill & Hit Indicators Options to Customize Confirmed</a> - Discusses how Battlefield 2042 will offer customization options for crosshairs and hit indicators, reflecting changes based on player feedback.
+                    </td>
+                </tr>                   
+            </table>
+
+            <p><b>2.2.2Research Inspiration</b></p>
+            <table class="fps-table">
+                <tr>
+                    <td>FPS Games</td>
+                    <td>>></td>
+                    <td>My Design</td>
+                </tr>
+                <tr>
+                    <td>Immediate Visual Feedback</td>
+                    <td>>></td>
+                    <td>The Content-Based Navigation Display intelligently provides users with accurate navigational feedback.</td>
+                </tr>
+                <tr>
+                    <td>User Customization of Reticles</td>
+                    <td>>></td>
+                    <td>Allowing users to upload custom images and text to annotate destination locations.</td>
+                </tr>
+                <tr>
+                    <td>Real-Time Data Processing and Display</td>
+                    <td>>></td>
+                    <td>Efficiently processes navigation-related data from uploaded videos, including direction, device tilt, and day/night status.</td>
+                </tr>
+            </table>            
+
+              
+        </div>
+        <br>
+        <div id="2-3">
+            <h2 class="second-sub-title">2.3 Explanation of Technical Choices</h2>
+            <p><div class="box012">
+                1. Initial Realization Goal: In order to gradually achieve the complete vision of the AR navigation system, I chose to design a video processing GUI as the first step.
+                </div>
+                <div class="box010">
+                2. Simulate AR Navigation: This prototype allows simulating navigation guidance in the real environment on pre-recorded videos, laying the foundation for subsequent complete AR effects.
+                </div>
+                <div class="box011">
+                3. Verify Effectiveness: In the absence of complete AR tools, this method provides me with a platform to verify the actual effects and practicality of the user interface and interaction design.
+                </div>
+            </p>
+        </div>
+        <br>
+        <div id="2-4">
+            <h2 class="second-sub-title">2.4 Target Setting🚩</h2>
+            <div class="text-content two-column">
+            <div class="box01">
+            ①📲 User-friendly</div>
+            <div class="box02">
+            ②🛠️ Customization capability</div>
+            <div class="box06">
+            ③🎯 Precision guidance</div>
+            <div class="box03">
+            ④⚡ Instant feedback</div>
+            <div class="box04">
+            ⑤🔄 Environmental adaptability</div>
+            <div class="box05">
+            ⑥🎮 Playfulness</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+<div id="main-content">   
+    <!-- 这是一个HTML注释，用于标识3 -->
+    <div id="chapter3">
+        <h2 class="sub-title">3 Prototype Design and Development</h2>
+        <div id="3-1">
+            <h2 class="second-sub-title">3.1 System Architecture</h2>
+            <table class="gui-table">
+                <tr class="row1">
+                  <td><p><div class="box08">GUI Interface</div></p></td>
+                  <td>
+                <p><div class="box08">A basic GUI application lets users choose video files, input text, and select images.</div></p>
+                <p><div class="box08">It includes buttons, labels, text fields, and file dialogs.</div></p>
+                <p><div class="box08">Users click a button to start video processing after making their choices.</div></p>
+                  </td>
+                </tr>
+                <tr class="row2">
+                  <td><p><div class="box09">Configuration Settings</div></p></td>
+                  <td><p><div class="box09">Functions collect user input from the GUI into a config object.</div></p>
+                    <p><div class="box09">This object guides the video processing.</div></p></td>
+                </tr>
+                <tr class="row3">
+                  <td><p><div class="box07">Auxiliary Functions</div></p></td>
+                  <td><p><div class="box07">These offer image overlays, resizing, and text-to-image conversion.</div></p>
+                    <p><div class="box07">They also determine frame brightness and day or night, relative orientation, and device tilt.</div></p></td>
+                </tr>
+                <tr class="row4">
+                  <td><p><div class="box012">Video Processing</div></p></td>
+                  <td><p><div class="box012">The system reads settings from the config and loads resources like selected images.</div></p>
+                    <p><div class="box012">It processes the video, using OCR for text recognition and adding overlays as per user settings.</div></p>
+                    <p><div class="box012">The final video is saved to a new file.</div></p></td>
+                </tr>
+            </table>
+        </div>
+<br>
+        <div id="3-2">
+            <h2 class="second-sub-title">3.2 System Flowchart</h2>    
+            <table class="image-table">
+                <tr class="row1">
+                  <td>User Interface Flowchart</td>
+                  <td>Main Program Flowchart</td>
+                </tr>
+                <tr class="row2">
+                  <td><img src="pic/flowchart_GUI.jpg" alt="User Interface Flowchart"></td>
+                  <td><img src="pic/flowchart_main.jpg" alt="Main Program Flowchart"></td>
+                </tr>
+            </table>
+</div>    
+        <br>
+        <div id="3-3">
+            <h2 class="second-sub-title">3.3 Video Processing Logic</h2>
+            <p><b>3.3.1 Video Information Discrimination Logic</b></p>
+            <table class="colored-table">
+                <tr>
+                  <td>Recognized Information</td>
+                  <td>Judgment/Extraction Method</td>
+                  <td>Result Determination</td>
+                </tr>
+                <tr>
+                  <td>Frame Brightness</td>
+                  <td>Calculate the Average Brightness of Video Frames</td>
+                  <td>Determination Based on Brightness Threshold as "Day" or "Night".</td>
+                </tr>
+                <tr>
+                    <td> Tilt Angle</td>
+                    <td>Parse Using Regular Expression from Extracted Text</td>
+                    <td>If the Tilt Angle is Within the Configured Range: Result is "UP"; Otherwise, "DOWN".</td>
+                </tr>
+                <tr>
+                    <td>Directional Information</td>
+                    <td>Parse Using Regular Expression from Extracted Text</td>
+                    <td>Calculate the Difference Between the Obtained Angle and the User-Inputted Angle; Determine as Front, Left, Right, or Back Based on the Difference and Configured Range.</td>
+                </tr>
+            </table>
+            <p><b>3.3.2 Graphic Overlay Logic</b></p>
+            <table class="colored-table">
+                <tr>
+                  <td>Graphics/Text</td>
+                  <td>Display Conditions</td>
+                  <td>Hide Conditions</td>
+                </tr>
+                <tr>
+                  <td><img src="pic/gallery/crosshair.png" alt="crosshair" />Crosshair</td>
+                  <td>Default Display; Adjust color based on brightness during day or night.</td>
+                  <td>The phone's position is "DOWN" and there are relevant settings in the configuration</td>
+                </tr>
+                <tr>
+                  <td><img src="pic/gallery/crosshair_orange_glow.png" alt="crosshair" /><img src="pic/gallery/crosshair_green_glow.png" alt="crosshair" />Glowing Graphic</td>
+                  <td>Select based on OCR output and default orientation (orange or green).</td>
+                  <td>The phone's position is "DOWN" and there are relevant settings in the configuration</td>
+                </tr>
+                <tr>
+                    <td><img src="pic/gallery/arrow_left.png" alt="crosshair" />
+                        <img src="pic/gallery/arrow_right.png" alt="crosshair" />
+                        <img src="pic/gallery/arrow_turnaround.png" alt="crosshair" />Arrow Graphic
+                    </td>
+                    <td>Select based on the direction in the OCR output.</td>
+                    <td>The phone's position is "DOWN" and there are relevant settings in the configuration</td>
+                </tr>
+                <tr>
+                    <td><img src="pic/gallery/custom_label.jpg" alt="crosshair" />User Uploaded Image</td>
+                    <td>A valid path is specified in the configuration; the direction is "FRONT" and has been recognized.</td>
+                    <td>User image is None or the direction has not been recognized</td>
+                </tr>
+                <tr>
+                    <td>User Customized Text</td>
+                    <td>Loaded in the configuration; the direction is "FRONT" and has been recognized.</td>
+                    <td>Text is empty or None or the direction has not been recognized</td>
+                </tr>                  
+            </table>
+            <p><b>3.3.3 Video Data Analysis and Discrimination Rules</b></p>
+                <div class="box013">
+                    <p><strong>User Orientation Calculation Description</strong> <br><br>
+                        The orientation is determined based on the angle <em>d</em><br>Calculated using the formula <em>d = arctan2(sin(b-a), cos(b-a))</em>. <br>
+                        Where <em>a</em> is the user's current orientation and <em>b</em> is the destination direction. <br>Based on the value of <em>d</em>, the user's orientation is categorized as follows:</p>
+                    <ul>
+                        <li><strong>Front:</strong> <br>If <em>-15° ≤ d ≤ 15°</em>, the user is facing forward.</li>
+                        <li><strong>Back:</strong> <br>If <em>165° ≤ d ≤ 180°</em> or <em>-180° ≤ d ≤ -165°</em>, the user is facing backward.</li>
+                        <li><strong>Left:</strong> <br>If <em>-165° ≤ d < -15°</em>, the user is facing left.</li>
+                        <li><strong>Right:</strong> <br>If <em>15° < d ≤ 165°</em>, the user is facing right.</li>
+                    </ul>   
+                </div>
+                <div class="box016">    
+                    <p><strong>Device Tilt Information Description</strong> <br><br>
+                        The position information from the device is only accurate when it is facing forward. If the device is not facing forward, the position information is deemed incorrect.<br> The orientation of the device is determined based on the detected angle as follows:</p>
+
+                    <ul>
+                        <li><strong>Device Facing Forward:</strong><br> If the angle <em>&theta;</em> satisfies <em>0° ≤ &theta; ≤ 120°</em>, the device is considered to be facing forward.</li>
+                        <li><strong>Device Not Facing Forward:</strong><br>If the angle does not meet the above condition, the device is not considered to be facing forward.</li>
+                    </ul>                                         
+                </div>
+                <div class="box014">  
+                    <p><strong>Day/Night Brightness Threshold Description</strong><br><br>
+                         The distinction between day and night is determined based on the brightness level of the frame. This is assessed using a set brightness threshold value:</p>
+
+                    <ul>
+                        <li><strong>Day:</strong><br> If the frame brightness <em>b</em> satisfies <em>b > 100</em>, it is considered daytime.</li>
+                        <li><strong>Night:</strong><br> If the frame brightness <em>b</em> satisfies <em>b ≤ 100</em>, it is considered nighttime.</li>
+                    </ul>                    
+                </div>
+        </div>
+    <br>
+    <div id="3-4">    
+        <h2 class="second-sub-title">3.4 Interactive Prototype Demonstration ▼</h2> 
+        <p class="text-content">Due to system limitations, my computer's interface is in Chinese, but it won't impact the presentation. Thanks for understanding and watching!</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/md7JY5dXOB4?si=8TYlaAAFrZP5zmgO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>    
+    </div>  
+    <br>
+    <div id="3-5">
+            <h2 class="second-sub-title">3.5 The Most Challenging Problem and Solutions</h2> 
+            <p><b>3.5.1 Integrating Text-Based Location and Orientation Data</b></p>
+            <div class="box013">Problem and Solution<br><br>
+                Due to the insufficient precision of devices in recording location and orientation, I adopted an alternative method: <br><br>Adding location information to the top left corner of each frame in the original video. This allows for direct reading of the previously added text in the video processing program, ensuring accurate position and direction data for each frame.
+            </div>
+            <div class="box014">
+                Method and Technology<br><br>
+                Text Addition Method<br>
+                Used OpenCV's `cv2.putText` and `rectangle` functions to print angle and inclination data on each video frame's top left corner.<br><br>
+                Text Recognition Method<br>
+                Employed Tesseract OCR technology for accurate detection and extraction of text from the video frames.  
+            </div>
+            <p><b>3.5.2 The Famous Northern Challenge: Angle Discontinuity Issue</b></p>
+            <div class="box013">
+            <b>Problem and Solution</b><br><br>
+                The discontinuity between 0° (North) and 360° (also North) poses a well-known challenge in angle handling. For instance, a jump from 350° to 10° should be seen as a 20° difference. <br><br>I employed the "shortest angle difference" method, which accurately handles transitions around the North, ensuring correct calculations of whether a user faces within a threshold direction.
+            </div>
+            <div class="box014">
+                <b>Method and Technology</b><br><br>
+                Formula<br>
+                Given two angles (a) and (b), the difference (d) is calculated as:<br><br>
+                <b><I>d = arctan2(sin(b-a), cos(b-a))</I></b><br><br>
+                This formula is used to determine phone orientation, calculating the angular difference between the direction extracted from OCR and the user-input direction.<br><br>
+                Direction Judgment Logic<br>
+                Positive difference: The user faces to the left of the intended direction.<br>
+                Negative difference: The user faces to the right of the intended direction.<br>
+                Zero difference: The user directly faces the intended direction.<br>    
+            </div>
+            <p><b>3.5.3 Video Image Overlay and Color Processing Challenge</b></p>
+            <div class="box015">        
+                <b>1. Inaccuracy in Black Detection and Color Replacement</b><br><br>
+                <b>Problem Description</b><br>The original method failed to accurately detect and replace black pixels, especially when the crosshair wasn't pure black.<br><br>
+                <b>Solution</b><br>Improved black pixel detection through grayscale conversion and threshold processing, ensuring effective replacement of black pixels with orange-red, even under anti-aliasing effects.
+            </div>
+            <div class="box016">        
+                <b>2. Incorrect Application of Grayscale Effect</b><br><br>
+                <b>Problem Description</b><br>The graphic displayed in grayscale incorrectly, even when the direction was detected accurately.<br><br>
+                <b>Solution</b><br>Modified the conditions for applying the grayscale effect to ensure it's used only when the direction is the default value "FRONT" and not extracted from OCR data. This approach maintained the graphic's original color under appropriate conditions.        
+            </div>
+            <p><b>3.5.4 Enhancing Video Processing Efficiency</b></p>
+            <div class="box015">        
+                <b>Problem</b><br>Slow processing speed due to handling videos frame by frame.<br><br>     
+                <b>Solution</b><br>Opted to process only one frame per second instead of every frame, significantly increasing efficiency.            
+            </div>
+
+        </div>
+
+        <br>
+    <div id="3-6">
+        <h2 class="second-sub-title">3.6 Program Features and Advantages</h2> 
+        <table class="gui-table">
+            <tr class="row1">
+              <td><p><div class="box08">Content-Aware Graphic Overlay</div></p></td>
+              <td>
+            <p><div class="box08">Extracts text from video frames using Tesseract OCR, adjusting graphics and text overlays to match video content.</div></p>
+            <p><div class="box08">Integrates OpenCV and advanced image processing techniques for dynamic transparency, color matching, and effect application.</div></p>
+              </td>
+            </tr>
+            <tr class="row2">
+              <td><p><div class="box09">Advanced Directional Analysis and Image Overlay</div></p></td>
+              <td><p><div class="box09">Interprets the direction and tilt angle to automatically select the most appropriate image overlays, such as arrows and crosshairs.</div></p>
+                <p><div class="box09">Adjusts image effects based on environmental conditions (like day or night) and device orientation to enhance the visual experience.</div></p></td>
+            </tr>
+            <tr class="row3">
+              <td><p><div class="box07">Modular Code and Configuration-Driven Design</div></p></td>
+              <td><p><div class="box07">Clear, modular code structure for easy maintenance and expansion.</div></p>
+                <p><div class="box07">Customizable features through configuration files for increased flexibility and user interaction.</div></p></td>
+            </tr>
+            <tr class="row4">
+              <td><p><div class="box012">Video Processing and Directional Awareness</div></p></td>
+              <td><p><div class="box012">The system reads settings from the config and loads resources like selected images.</div></p>
+                <p><div class="box012">Processes video streams and files, saving processed frames.</div></p>
+                <p><div class="box012">Device tilt and directional awareness capabilities to reflect real-world information with images condition.</div></p></td>
+            </tr>
+        </table>             
+        </div>
+    </div>
+</div>                       
+
+
+<hr>
+<div id="main-content">   
+    <!-- 这是一个HTML注释，用于标识4 -->
+    <div id="chapter4">
+        <h2 class="sub-title">4 Future Directions</h2>
+        <p>Based on this prototype, I envision transforming the current video preprocessing technology into an Augmented Reality (AR) application in the future.</p>
+        <table class="future-table">
+            <tr>
+              <td>Develop Real-Time Processing</td>
+              <td>Upgrade the tool for real-time video stream processing. Optimize algorithms to reduce latency, and ensure efficient performance on mobile devices.</td>
+            </tr>
+            <tr>
+                <td>Integrate Spatial Awareness Technology</td>
+                <td>Use technologies like ARKit or ARCore. Enable the app to understand the user's environment, that includes detecting surfaces, estimating lighting, and recognizing objects.</td>
+            </tr>
+            <tr>
+                <td>Transform User Interface and Interaction Design</td>
+                <td>Redesign the user interface for an intuitive and interactive AR experience. Incorporate touch, gestures, or voice commands for interactions.</td>
+            </tr>
+            <tr>
+                <td>Integrate and Optimize AR Elements</td>
+                <td>Incorporate AR elements such as 3D models and animations. Perform performance optimizations for a smooth experience.</td>
+            </tr>
+            <tr>
+                <td>Utilize Location Services and Geographic Data</td>
+                <td> Integrate location services and map data. Provide navigation and information based on the user's actual location.</td>
+            </tr>
+            <tr>
+                <td>Expand Application Features and Scenarios</td>
+                <td>Extend functionalities for various scenarios like gaming, education, or tourism. For instance, offer 3D views of historical buildings or virtual treasure hunting experiences for gamers.</td>
+            </tr>
+            <tr>
+                <td>User Testing and Iteration</td>
+                <td>Conduct continuous user testing. Collect feedback and iteratively optimize the application. Ensure the final product meets user needs and offers a high-quality AR experience.</td>
+            </tr>
+            <tr>
+                <td>Performance Optimization and Device Adaptation</td>
+                <td>Optimize the application for different performance levels of devices. Ensure smooth operation across a variety of devices.</td>
+            </tr>
+        </table> 
+        </div>
+    </div>
+</div>
+
+<hr>
+<div id="main-content">   
+    <!-- 这是一个HTML注释，用于标识3 -->
+    <div id="chapter5">
+        <h2 class="sub-title">5 Future Integration Application Scenario Storyboarding</h2>
+        <div class="image-container">
+            <img src="pic/Storyboard/1.jpg" alt="1">
+            <img src="pic/Storyboard/2.jpg" alt="2">
+            <img src="pic/Storyboard/3.jpg" alt="3">
+            <img src="pic/Storyboard/4.jpg" alt="4">         
+            <img src="pic/Storyboard/5.jpg" alt="5">
+            <img src="pic/Storyboard/6.jpg" alt="6">
+        </div>
+    </div>
+</div>
+<hr>
+<div id="main-content">   
+    <!-- 这是一个HTML注释，用于标识3 -->
+    <div id="chapter6">
+        <h2 class="sub-title">6  Project Conclusions and Reflections</h2>
+        <div id="6-1">
+            <h2 class="second-sub-title">6.1 Complete Development Log: Challenges and Resolutions</h2> 
+            <div class="pdf-container">
+                <iframe src="log/Main Program Issues and Solutions Log.pdf"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="log/Background Video Preparation Module (background_video_prep.py) Error Log.pdf"></iframe>
+            </div>
+            <div class="pdf-container">
+                <iframe src="log/Crosshair, Glowing Shapes, Day_Night, Tilt Loading Error Log.pdf"></iframe>
+            </div>  
+            <div class="pdf-container">
+                <iframe src="log/Image Recognition Error Log 1.pdf"></iframe>
+            </div> 
+            <div class="pdf-container">
+                <iframe src="log/Image Recognition Error Log 2.pdf"></iframe>
+            </div> 
+        </div>
+        <br>       
+        <div id="6-2">
+            <h2 class="second-sub-title">6.2 Self-Learning in Interactive Media Technology and Video Processing</h2>
+            <p>
+                <b>Technology Selection<br></b>
+When this project started, I wanted to make an augmented reality app. However, faced with real-world technical limitations, I chose to turn to prototyping for video processing. During the development process, I taught myself many new skills, especially in complex programming areas. Despite the challenges, this learning process provided me with many learning opportunities and technical depth. <br><br>
+<b>Changes brought about by artificial intelligence<br></b>
+During this process, the introduction of artificial intelligence (AI) technology had a significant impact on me. AI has not only greatly improved my work efficiency, but more importantly, it has given me the courage and ability to quickly put my ideas into practice. With the help of AI, I can transform ideas into reality faster, which not only speeds up my project process, but also provides me with valuable learning and innovation experiences. AI technology has not only changed the way I complete tasks, it has also greatly expanded my awareness of the potential of technology and my personal abilities.
+            </p>
+        </div>
+    </div>
+</div>
+<hr>
+
+
+<!-- 这是一个HTML注释，用于程序框架 -->
+<div id="main-content">   
+    <div id="chapter7">
+        <h2 class="sub-title">7 Technical Implementation and Program Module Exhibition</h2>
+        <h2 class="second-sub-title">Modular and AI Assistance Programming</h2>
+        <p>In this project, I have embraced a modular programming approach. It allowed each function and component to be developed, tested, and optimized independently. It not only enhances code readability and maintainability but also simplifies expansions and improvements of the project.<br><br>
+Building upon this, I have also embraced AI-assisted programming techniques to enhance accuracy and efficiency—providing AI with detailed descriptions of each small program module, and then integrating them together.<br><br>
+In the text below, you will see how the modules are divided—each box represents a section. What you're viewing is the condensed summary.<br><br>
+Programs 7.1 to 7.4 are the components of the GUI, and 7.5 and 7.6 are additional programs.
+        </p>  
+        <p>
+            <span class="highlight">
+            🖱️ Please hover over a box to see the detailed code.</span>
+        </p>  
+        <p class="small-text">
+            The actual development process is much more complicated than what is shown. In order to present the structure and logic of the project more intuitively, what you see is the final version that has been refined and optimized.
+        </p>
+        <div id="7-1">
+            <h2 class="second-sub-title">7.1 GUI Code Structure</h2>
+            <div class="box1">
+                <div class="initial-text">Importing the required libraries and modules.
+                </div>
+                <div class="hover-text">import tkinter as tk<br>
+                    from tkinter import ttk<br>
+                    import os<br>
+                    from tkinter import filedialog<br>
+                    import config<br>
+                    import subprocess<br>
+                    import sys<br>
+                    import pytesseract<br>
+                </div>
+            </div>
+
+            <div class="box2">
+                <div class="initial-text">Allows users to select videos, JPG images, PNG directional images, and output directories, and updates the direction input method based on their choices.
+                </div>
+                <div class="hover-text">
+                    def browse_video():<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;config.VIDEO_PATH = filedialog.askopenfilename(filetypes=[("MP4 files", "*.mp4")])<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;video_path_label.config(text=f"Selected: {config.VIDEO_PATH}")<br>
+                    <br>
+                    def browse_image():<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;config.USER_IMAGE_PATH = filedialog.askopenfilename(filetypes=[("JPG files", "*.jpg")])<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;image_path_label.config(text=f"Selected: {config.USER_IMAGE_PATH}")<br>
+                    <br>
+                    def browse_direction_image():&nbsp;&nbsp;# New Function<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;config.DIRECTION_IMAGE_PATH = filedialog.askopenfilename(filetypes=[("PNG files", "*.PNG")])<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;direction_image_path_label.config(text=f"Selected: {config.DIRECTION_IMAGE_PATH}")<br>
+                    <br>
+                    def browse_output():<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;config.OUTPUT_VIDEO_PATH = filedialog.askdirectory()<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;output_path_label.config(text=f"Selected: {config.OUTPUT_VIDEO_PATH}")<br>
+                    <br>
+                    def update_direction_input_method(event):&nbsp;&nbsp;# New Function<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;selected_method = direction_input_method_combobox.get()<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if selected_method == "Manual Input":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_direction_entry.pack()<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;direction_image_path_button.pack_forget()<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;elif selected_method == "Upload Image":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_direction_entry.pack_forget()<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;direction_image_path_button.pack()<br>
+                </div>
+            </div>
+            
+            <div class="box1">
+                <div class="initial-text">
+                    Run_main_program:<br><br>
+Obtain text input from the user, and process and retrieve directional information based on the selected input method (manual or via image).<br><br>
+· When the user chooses to input direction by uploading an image, the interface runs an external image recognition program (`Image_Recognition.py`).<br><br>
+· After all necessary input fields are completed, the user's configuration information is written to the config.txt file.
+                </div>
+                <div class="hover-text">
+                    def run_main_program():<br>
+&emsp;config.USER_TEXT = user_text_entry.get()<br>
+<br>
+&emsp;user_input_method = direction_input_method_combobox.get()<br>
+&emsp;if user_input_method == "Manual Input":<br>
+&emsp;&emsp;config.USER_DIRECTION_INPUT = user_direction_entry.get()<br>
+&emsp;elif user_input_method == "Upload Image":<br>
+&emsp;&emsp;result = subprocess.run(["python", "Image_Recognition.py"], capture_output=True, text=True, encoding='utf-8')<br>
+&emsp;&emsp;if result.returncode == 0:<br>
+&emsp;&emsp;&emsp;output = result.stdout.strip()<br>
+&emsp;&emsp;&emsp;direction_info = output.split(":")[1].strip()<br>
+&emsp;&emsp;&emsp;config.USER_DIRECTION_INPUT = direction_info<br>
+&emsp;&emsp;else:<br>
+&emsp;&emsp;&emsp;print("Image recognition failed:", result.stderr)<br>
+&emsp;&emsp;&emsp;return<br>
+
+                </div>
+            </div>
+
+            <div class="box2">
+                <div class="initial-text">Path Processing and Validation:<br><br>
+                    Extract video, image, and output path information from the interface elements and adjust the format.<br><br>
+                    Ensure paths are compatible with Windows systems and validate the existence of files and directories.
+                    
+                </div>
+                <div class="hover-text">
+                    config.VIDEO_PATH = video_path_label.cget("text").replace("Selected: ", "").strip()<br>
+config.USER_IMAGE_PATH = image_path_label.cget("text").replace("Selected: ", "").strip()<br>
+config.OUTPUT_VIDEO_PATH = output_path_label.cget("text").replace("Selected: ", "").strip()<br>
+<br>
+full_output_path = os.path.join(config.OUTPUT_VIDEO_PATH, 'output.avi')<br>
+config.OUTPUT_VIDEO_PATH = full_output_path<br>
+<br>
+config.VIDEO_PATH = config.VIDEO_PATH.replace("/", "\\")<br>
+config.USER_IMAGE_PATH = config.USER_IMAGE_PATH.replace("/", "\\")<br>
+config.OUTPUT_VIDEO_PATH = config.OUTPUT_VIDEO_PATH.replace("/", "\\")<br>
+                </div>
+            </div>
+
+            <div class="box1">
+                <div class="initial-text">
+                    Program Execution:<br><br>
+Print the user's input information and run the main program based on the validated input.
+                </div>
+                <div class="hover-text">
+                    print(f"User Text: {config.USER_TEXT}")<br>
+print(f"User Direction: {config.USER_DIRECTION_INPUT}")<br>
+print(f"Video Path: {config.VIDEO_PATH}")<br>
+print(f"Image Path: {config.USER_IMAGE_PATH}")<br>
+print(f"Output Path: {config.OUTPUT_VIDEO_PATH}")<br>
+<br>
+if not os.path.exists(config.VIDEO_PATH):<br>
+&emsp;print(f"Video file does not exist: {config.VIDEO_PATH}")<br>
+&emsp;return<br>
+if not os.path.exists(config.USER_IMAGE_PATH):<br>
+&emsp;print(f"Image file does not exist: {config.USER_IMAGE_PATH}")<br>
+&emsp;return<br>
+output_directory = os.path.dirname(config.OUTPUT_VIDEO_PATH)<br>
+if not os.path.exists(output_directory):<br>
+&emsp;print(f"Output directory does not exist: {output_directory}")<br>
+&emsp;return<br>
+<br>
+if all([config.VIDEO_PATH, config.USER_IMAGE_PATH, config.OUTPUT_VIDEO_PATH, config.USER_TEXT, config.USER_DIRECTION_INPUT]):<br>
+&emsp;config.write_config()<br>
+&emsp;result = subprocess.run([sys.executable, "E:\\AR_Wayfinding_Project\\src - 副本\\GUI\\AR_Wayfinding_Main.py"], capture_output=True, text=True, encoding='utf-8')<br>
+&emsp;print("Standard Output:", result.stdout)<br>
+&emsp;print("Standard Error:", result.stderr)<br>
+else:<br>
+&emsp;print("All fields must be filled out before running the main program.")<br>
+&emsp;return<br>
+
+                </div>
+            </div>
+               
+            <div class="box2">
+                <div class="initial-text">
+                    Graphic User Interface (GUI) Design:<br><br>
+1. Main Window:<br>
+Create a main window titled "AR Wayfinding".<br><br>
+2. User Text Input Area:<br>
+Provide a label and a text entry box for users to input text.<br><br>
+3. Direction Input Method Selection:<br>
+Through a dropdown selection box, users can choose the method of direction input: manual entry or image upload. When the selection changes, the interface adjusts accordingly.<br><br>
+4. User Direction Input Area:<br>
+When manual direction input is chosen, provide a label and a text entry box for users to input direction.<br><br>
+5. Direction Image Selection Area:<br>
+When choosing to input direction via image, provide a label and a button for users to select the direction image.<br><br>
+6. User Image Selection Area:<br>
+Provide a label and a button for users to select the user image.<br><br>
+7. Video Selection Area:<br>
+Provide a label and a button for users to select a video.<br><br>
+8. Output Video Path Selection Area:<br>
+Provide a label and a button for users to select the path for the output video.<br><br>
+9. Run Button:<br>
+Provide a button that, when clicked, will execute the main program (AR_Wayfinding_Main.py) based on the user's input.
+                </div>
+                <div class="hover-text">
+                    root&nbsp;=&nbsp;tk.Tk()<br>
+root.title("AR&nbsp;Wayfinding")<br><br>
+user_text_label&nbsp;=&nbsp;tk.Label(root,&nbsp;text="Enter&nbsp;User&nbsp;Text:")<br>
+user_text_label.pack()<br>
+user_text_entry&nbsp;=&nbsp;tk.Entry(root)<br>
+user_text_entry.pack()<br><br>
+direction_input_method_label&nbsp;=&nbsp;tk.Label(root,&nbsp;text="Direction&nbsp;Input&nbsp;Method:")&nbsp;&nbsp;<br>
+direction_input_method_label.pack()<br>
+direction_input_method_combobox&nbsp;=&nbsp;ttk.Combobox(root,&nbsp;values=["Manual&nbsp;Input",&nbsp;"Upload&nbsp;Image"])<br>
+direction_input_method_combobox.pack()<br>
+direction_input_method_combobox.current(0)<br>
+direction_input_method_combobox.bind("<<ComboboxSelected>>",&nbsp;update_direction_input_method)<br><br>
+user_direction_label&nbsp;=&nbsp;tk.Label(root,&nbsp;text="Enter&nbsp;User&nbsp;Direction:")<br>
+user_direction_label.pack()<br>
+user_direction_entry&nbsp;=&nbsp;tk.Entry(root)<br>
+user_direction_entry.pack()<br><br>
+direction_image_path_label&nbsp;=&nbsp;tk.Label(root,&nbsp;text="Select&nbsp;Direction&nbsp;Image&nbsp;Path:")<br>
+direction_image_path_label.pack()<br>
+direction_image_path_button&nbsp;=&nbsp;tk.Button(root,&nbsp;text="Browse",&nbsp;command=browse_direction_image)<br>
+direction_image_path_button.pack_forget()<br><br>
+image_path_label&nbsp;=&nbsp;tk.Label(root,&nbsp;text="Select&nbsp;User&nbsp;Image&nbsp;Path:")<br>
+image_path_label.pack()<br>
+image_path_button&nbsp;=&nbsp;tk.Button(root,&nbsp;text="Browse",&nbsp;command=browse_image)<br>
+image_path_button.pack()<br><br>
+video_path_label&nbsp;=&nbsp;tk.Label(root,&nbsp;text="Select&nbsp;Video&nbsp;Path:")<br>
+video_path_label.pack()<br>
+video_path_button&nbsp;=&nbsp;tk.Button(root,&nbsp;text="Browse",&nbsp;command=browse_video)<br>
+video_path_button.pack()<br><br>
+output_path_label&nbsp;=&nbsp;tk.Label(root,&nbsp;text="Select&nbsp;Output&nbsp;Video&nbsp;Path:")<br>
+output_path_label.pack()<br>
+output_path_button&nbsp;=&nbsp;tk.Button(root,&nbsp;text="Browse",&nbsp;command=browse_output)<br>
+output_path_button.pack()<br><br>
+run_button&nbsp;=&nbsp;tk.Button(root,&nbsp;text="Run&nbsp;Program",&nbsp;command=run_main_program)<br>
+run_button.pack()<br><br>
+root.mainloop()              
+                </div>
+            </div>
+            </div>
+
+            <div id="7-2">
+                <h2 class="second-sub-title">7.2 Configuration File Code Structure</h2>
+
+            
+            <div class="box3">
+                <div class="initial-text">Imported Libraries:<br><br>
+                    cv2 (OpenCV): For image processing and computer vision functionalities.
+                </div>
+                <div class="hover-text">
+                    # config.py<br>
+import&nbsp;cv2        
+                </div>
+            </div>
+
+            <div class="box4">
+                <div class="initial-text">
+                    Path and User Input:<br><br>
+Predefined Image Resource Path<br>
+User Input and Output Path
+                </div>
+                <div class="hover-text">
+CROSSHAIR_PATH = "E:\\AR_Wayfinding_Project\\assets\\gallery\\crosshair.png"<br>
+CROSSHAIR_ORANGE_GLOW_PATH = "E:\\AR_Wayfinding_Project\\assets\\gallery\\crosshair_orange_glow.png"<br>
+CROSSHAIR_GREEN_GLOW_PATH = "E:\\AR_Wayfinding_Project\\assets\\gallery\\crosshair_green_glow.png"<br>
+ARROW_LEFT_PATH = "E:\\AR_Wayfinding_Project\\assets\\gallery\\arrow_left.png"<br>
+ARROW_RIGHT_PATH = "E:\\AR_Wayfinding_Project\\assets\\gallery\\arrow_right.png"<br>
+ARROW_TURNAROUND_PATH = "E:\\AR_Wayfinding_Project\\assets\\gallery\\arrow_turnaround.png"<br>
+UPRIGHT_REMINDER_PATH = "E:\\AR_Wayfinding_Project\\assets\\gallery\\upright_reminder.png"<br><br>
+USER_TEXT = ""<br>
+USER_DIRECTION_INPUT = ""<br>
+VIDEO_PATH = ""<br>
+USER_IMAGE_PATH = ""<br>
+OUTPUT_VIDEO_PATH = ""
+                </div>
+            </div>
+
+            <div class="box3">
+                <div class="initial-text">
+                    Write_config() function:<br><br>
+Writes user configuration data into the config.txt file.
+                </div>
+                <div class="hover-text">
+                    def&nbsp;write_config():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;open("config.txt",&nbsp;"w")&nbsp;as&nbsp;f:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f.write(f"USER_TEXT={USER_TEXT}\n")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f.write(f"USER_DIRECTION_INPUT={USER_DIRECTION_INPUT}\n")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f.write(f"VIDEO_PATH={VIDEO_PATH}\n")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f.write(f"USER_IMAGE_PATH={USER_IMAGE_PATH}\n")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f.write(f"OUTPUT_VIDEO_PATH={OUTPUT_VIDEO_PATH}\n")
+                </div>
+            </div>
+
+            <div class="box4">
+                <div class="initial-text">
+                    Tesseract OCR Configuration:<br><br>
+Set the path for the Tesseract command.
+                </div>
+                <div class="hover-text">
+                    TESSERACT_CMD_PATH&nbsp;=&nbsp;'E:\\Tesseract\\tesseract.exe'
+                </div>
+            </div>
+
+            <div class="box3">
+                <div class="initial-text">
+                    Brightness Threshold Configuration:<br><br>
+Set the brightness threshold to 100, used to determine whether it's day or night based on frame brightness.
+                </div>
+                <div class="hover-text">
+                    BRIGHTNESS_THRESHOLD = 100
+                </div>
+            </div>
+
+            <div class="box4">
+                <div class="initial-text">
+                    Direction Mapping:<br><br>
+Define the mapping of directions to their corresponding angles, for example: "East" corresponds to 90 degrees.
+                </div>
+                <div class="hover-text">
+                    DIRECTION_MAPPING&nbsp;=&nbsp;{<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"North&nbsp;by&nbsp;East":&nbsp;45,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"East":&nbsp;90,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"South&nbsp;by&nbsp;East":&nbsp;135,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"South":&nbsp;180,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"South&nbsp;by&nbsp;West":&nbsp;225,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"West":&nbsp;270,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"North&nbsp;by&nbsp;West":&nbsp;315<br>
+                        }                                            
+                </div>
+            </div>
+
+            <div class="box3">
+                <div class="initial-text">
+                    Directional Positioning Threshold:<br><br>
+Set the angle threshold to determine the direction the user is facing, for example: the frontal angle range is -15 to 15 degrees.
+                </div>
+                <div class="hover-text">
+                    FRONT_MIN&nbsp;=&nbsp;-15<br>
+                    FRONT_MAX&nbsp;=&nbsp;15<br>
+                    BACK_MIN_1&nbsp;=&nbsp;165<br>
+                    BACK_MAX_1&nbsp;=&nbsp;180<br>
+                    BACK_MIN_2&nbsp;=&nbsp;-180<br>
+                    BACK_MAX_2&nbsp;=&nbsp;-165<br>
+                    LEFT_MIN&nbsp;=&nbsp;-165<br>
+                    LEFT_MAX&nbsp;=&nbsp;-15<br>
+                    RIGHT_MIN&nbsp;=&nbsp;15<br>
+                    RIGHT_MAX&nbsp;=&nbsp;165                                        
+                </div>
+            </div>
+
+            <div class="box4">
+                <div class="initial-text">
+                    Device Tilt Information:<br><br>
+Set the angle range to determine whether the device screen is facing up, for example: the angle range is 0 to 120 degrees.
+                </div>
+                <div class="hover-text">
+                    SCREEN_UP_MIN&nbsp;=&nbsp;0&nbsp;&nbsp;#&nbsp;Minimum&nbsp;angle&nbsp;for&nbsp;screen&nbsp;facing&nbsp;up<br>
+SCREEN_UP_MAX&nbsp;=&nbsp;120&nbsp;&nbsp;#&nbsp;Maximum&nbsp;angle&nbsp;for&nbsp;screen&nbsp;facing&nbsp;up
+                </div>
+            </div>
+
+            <div class="box3">
+                <div class="initial-text">
+                    Default Value Settings:<br><br>
+When the direction is indeterminable, the default direction is "FRONT".<br>
+Use of grayscale mask is set to True.<br>
+Use of grayscale effect is set to False.<br>
+When the device tilt is indeterminable, the default tilt is "SCREEN_UP".
+                </div>
+                <div class="hover-text">
+                    DEFAULT_ORIENTATION&nbsp;=&nbsp;"FRONT"<br>
+GRAY_OUT_OVERLAY&nbsp;=&nbsp;True<br>
+GRAYSCALE_EFFECT:&nbsp;False<br>
+DEFAULT_TILT&nbsp;=&nbsp;"SCREEN_UP"
+                </div>
+            </div>
+
+            <div class="box4">
+                <div class="initial-text">
+                    Graphics Display Settings:<br><br>
+Settings for crosshairs, glowing orange crosshairs, glowing green crosshairs, left arrow, right arrow, and turn-around arrow include:<br>
+Position, size, color, and other related attributes.<br><br>
+Display behavior when the screen is facing down (Hidden).
+                </div>
+                <div class="hover-text">
+                    # ------------ CROSSHAIR Settings ------------<br><br>
+CROSSHAIR_POSITION&nbsp;=&nbsp;"center"&nbsp;&nbsp;# Always load in the center of the video<br>
+CROSSHAIR_DIMENSION_RATIO&nbsp;=&nbsp;0.5&nbsp;&nbsp;# Side length is half the width of the video<br><br>
+CROSSHAIR_COLOR_DAY&nbsp;=&nbsp;(0,&nbsp;0,&nbsp;0,&nbsp;255)&nbsp;&nbsp;# Display color during daytime<br>
+CROSSHAIR_COLOR_NIGHT&nbsp;=&nbsp;(255,255,255,255)&nbsp;&nbsp;# Display color during nighttime<br><br>
+# CROSSHAIR Screen Facing Down Behavior<br>
+CROSSHAIR_HIDE_ON_SCREEN_DOWN&nbsp;=&nbsp;True&nbsp;&nbsp;# If the device screen is detected to be facing down, the crosshair will not display<br><br>
+
+# ------------ CROSSHAIR ORANGE GLOW Settings ------------<br><br>
+CROSSHAIR_ORANGE_GLOW_POSITION&nbsp;=&nbsp;"center"&nbsp;&nbsp;# Always load in the center of the video<br>
+CROSSHAIR_ORANGE_GLOW_DIMENSION_RATIO&nbsp;=&nbsp;0.5&nbsp;*&nbsp;(127&nbsp;/&nbsp;120)&nbsp;&nbsp;# Glow dimension slightly larger than crosshair<br><br>
+CROSSHAIR_ORANGE_GLOW_DAY_ALPHA&nbsp;=&nbsp;0.3&nbsp;&nbsp;# 40% transparency during daytime<br>
+CROSSHAIR_ORANGE_GLOW_NIGHT_ALPHA&nbsp;=&nbsp;0.5&nbsp;&nbsp;# 60% transparency during nighttime<br><br>
+CROSSHAIR_ORANGE_GLOW_DISPLAY_CONDITION&nbsp;=&nbsp;"not_front"&nbsp;&nbsp;# Only display when user is NOT facing forward<br><br>
+# CROSSHAIR_ORANGE_GLOW Screen Facing Down Behavior<br>
+CROSSHAIR_ORANGE_GLOW_HIDE_ON_SCREEN_DOWN&nbsp;=&nbsp;True&nbsp;&nbsp;# If the device screen is detected to be facing down, the crosshair_orange_glow will not display<br><br>
+
+# ------------ CROSSHAIR GREEN GLOW Settings ------------<br><br>
+CROSSHAIR_GREEN_GLOW_POSITION&nbsp;=&nbsp;"center"&nbsp;&nbsp;# Always load in the center of the video<br>
+CROSSHAIR_GREEN_GLOW_DIMENSION_RATIO&nbsp;=&nbsp;0.5&nbsp;*&nbsp;(13&nbsp;/&nbsp;12)&nbsp;&nbsp;# Glow dimension slightly larger than crosshair<br><br>
+CROSSHAIR_GREEN_GLOW_DAY_ALPHA&nbsp;=&nbsp;0.5&nbsp;&nbsp;# 60% transparency during daytime<br>
+CROSSHAIR_GREEN_GLOW_NIGHT_ALPHA&nbsp;=&nbsp;0.6&nbsp;&nbsp;# 80% transparency during nighttime<br><br>
+CROSSHAIR_GREEN_GLOW_DISPLAY_CONDITION&nbsp;=&nbsp;"front"&nbsp;&nbsp;# Only display when user is facing forward<br><br>
+# CROSSHAIR_GREEN_GLOW Screen Facing Down Behavior<br>
+CROSSHAIR_GREEN_GLOW_HIDE_ON_SCREEN_DOWN&nbsp;=&nbsp;True&nbsp;&nbsp;# If the device screen is detected to be facing down, the crosshair_green_glow will not display<br><br>
+
+# ------------ ARROW LEFT Settings ------------<br><br>
+ARROW_LEFT_ASPECT_RATIO&nbsp;=&nbsp;"keep"&nbsp;&nbsp;# Keep the original aspect ratio of the graphic<br>
+ARROW_LEFT_WIDTH_RATIO&nbsp;=&nbsp;0.5&nbsp;&nbsp;# Arrow width is half of the video width<br>
+ARROW_LEFT_VERTICAL_POSITION_RATIO&nbsp;=&nbsp;11/14&nbsp;&nbsp;# Position the center of the arrow so it's distance from the bottom is 3/14 of video height<br><br>
+ARROW_LEFT_COLOR_DAY&nbsp;=&nbsp;(0,0,0,255)&nbsp;&nbsp;# Display color during daytime<br>
+ARROW_LEFT_COLOR_NIGHT&nbsp;=&nbsp;(255,255,255,255)&nbsp;&nbsp;# Display color during nighttime<br><br>
+ARROW_LEFT_DISPLAY_CONDITION&nbsp;=&nbsp;"right"&nbsp;&nbsp;# Only display when user is facing right<br><br>
+# ARROW_LEFT Screen Facing Down Behavior<br>
+ARROW_LEFT_HIDE_ON_SCREEN_DOWN&nbsp;=&nbsp;True&nbsp;&nbsp;# If the device screen is detected to be facing down, the arrow_left will not display<br><br>
+
+# ------------ ARROW RIGHT Settings ------------<br><br>
+ARROW_RIGHT_ASPECT_RATIO&nbsp;=&nbsp;"keep"&nbsp;&nbsp;# Keep the original aspect ratio of the graphic<br>
+ARROW_RIGHT_WIDTH_RATIO&nbsp;=&nbsp;0.5&nbsp;&nbsp;# Arrow width is half of the video width<br>
+                </div>
+            </div>
+
+            <div class="box3">
+                <div class="initial-text">
+                    User Tag Settings:<br><br>
+Image Configuration:<br>
+Defines the maximum width, maximum height, and vertical offset of the image.<br><br>
+Text Configuration:<br>
+Defines the font, font size, font color, background color, text background padding, and the position of the text relative to the image.<br><br>
+                </div>
+                <div class="hover-text">
+                    # ------------ USER LABEL Settings ------------<br><br>
+                    # Image settings<br>
+                    IMAGE_MAX_WIDTH_RATIO&nbsp;=&nbsp;0.5&nbsp;&emsp;# Maximum width of the image as a fraction of video width<br>
+                    IMAGE_MAX_HEIGHT_RATIO&nbsp;=&nbsp;0.5&nbsp;&emsp;# Maximum height of the image also as a fraction of video width (assuming both width and height are the same based on your description)<br>
+                    IMAGE_VERTICAL_OFFSET_RATIO&nbsp;=&nbsp;1/14&nbsp;&emsp;# Vertical offset from the top of the video to the centroid of the image<br><br>
+                    # Text settings<br>
+                    TEXT_FONT&nbsp;=&nbsp;cv2.FONT_HERSHEY_SIMPLEX&nbsp;&emsp;# Using OpenCV's font<br>
+                    TEXT_FONT_SIZE&nbsp;=&nbsp;0.7&nbsp;&emsp;# Previously used font size, can be adjusted later<br>
+                    TEXT_FONT_COLOR&nbsp;=&nbsp;(255,&nbsp;255,&nbsp;255)&nbsp;&emsp;# White color for the text<br>
+                    TEXT_BACKGROUND_COLOR&nbsp;=&nbsp;(0,&nbsp;0,&nbsp;0)&nbsp;&emsp;# Black color for text background<br>
+                    TEXT_PADDING&nbsp;=&nbsp;5&nbsp;&emsp;# Padding around the text for its background<br>
+                    TEXT_POSITION_BELOW_IMAGE&nbsp;=&nbsp;10&nbsp;&emsp;# Vertical offset between the image and the text<br>                      
+                </div>
+            </div>
+
+            <div class="box4">
+                <div class="initial-text">
+Upright Notification Settings:<br><br>
+Defines the shape, position, and other relevant attributes of the notification.<br><br>
+When the screen is facing down, the upright notification will not hide.
+                </div>
+                <div class="hover-text">
+                    # ------------ UPRIGHT REMINDER Settings ------------<br>
+UPRIGHT_REMINDER_ASPECT_RATIO&nbsp;=&nbsp;"keep"&emsp;#&nbsp;Keep&nbsp;the&nbsp;original&nbsp;aspect&nbsp;ratio&nbsp;of&nbsp;the&nbsp;graphic<br>
+UPRIGHT_REMINDER_WIDTH_RATIO&nbsp;=&nbsp;0.5&emsp;#&nbsp;Reminder&nbsp;width&nbsp;is&nbsp;half&nbsp;of&nbsp;the&nbsp;video&nbsp;width<br>
+UPRIGHT_REMINDER_VERTICAL_POSITION_RATIO&nbsp;=&nbsp;1/2&emsp;#&nbsp;Position&nbsp;the&nbsp;center&nbsp;of&nbsp;the&nbsp;reminder&nbsp;at&nbsp;the&nbsp;center&nbsp;of&nbsp;the&nbsp;video<br><br>
+UPRIGHT_REMINDER_HIDE_ON_SCREEN_DOWN&nbsp;=&nbsp;False
+                </div>
+            </div>
+            </div>
+            
+            <div id="7-3">
+                <h2 class="second-sub-title">7.3 Image_Recognition Code Structure</h2>
+
+            <div class="box5">
+                <div class="initial-text">
+                    Imported libraries:<br><br>
+cv2 (OpenCV): For image processing and computer vision functionalities.<br>
+numpy (np): For numerical computations and multidimensional array manipulations.
+                </div>
+                <div class="hover-text">
+                    import&nbsp;cv2<br>
+import&nbsp;numpy&nbsp;as&nbsp;np
+                </div>
+            </div>
+
+            <div class="box6">
+                <div class="initial-text">
+Image loading settings:<br><br>
+Use OpenCV to load an image from a given path.<br>
+Output an error message when the image cannot be loaded.<br>
+Return the image if loaded successfully, otherwise return None.
+                </div>
+                <div class="hover-text">
+                    def&nbsp;load_image(image_path):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;image&nbsp;=&nbsp;cv2.imread(image_path)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;image&nbsp;is&nbsp;None:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Error:&nbsp;Could&nbsp;not&nbsp;load&nbsp;image!")<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;None<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;image                      
+                </div>
+            </div>
+
+            <div class="box5">
+                <div class="initial-text">
+                    Red and Blue Centroid Detection Settings:<br><br>
+Convert the image from BGR to HSV format.<br>
+Define the HSV range for red and blue.<br>
+Extract red and blue masks from the image using the defined ranges.<br>
+Calculate and return the centroid positions of the red and blue areas.
+                </div>
+                <div class="hover-text">
+                    def&nbsp;detect_red_and_blue_centroids(image):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;hsv_image&nbsp;=&nbsp;cv2.cvtColor(image,&nbsp;cv2.COLOR_BGR2HSV)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower_red1&nbsp;=&nbsp;np.array([0,&nbsp;100,&nbsp;100])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;upper_red1&nbsp;=&nbsp;np.array([10,&nbsp;255,&nbsp;255])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower_red2&nbsp;=&nbsp;np.array([160,&nbsp;100,&nbsp;100])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;upper_red2&nbsp;=&nbsp;np.array([180,&nbsp;255,&nbsp;255])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower_blue&nbsp;=&nbsp;np.array([100,&nbsp;50,&nbsp;50])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;upper_blue&nbsp;=&nbsp;np.array([140,&nbsp;255,&nbsp;255])<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;red_mask1&nbsp;=&nbsp;cv2.inRange(hsv_image,&nbsp;lower_red1,&nbsp;upper_red1)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;red_mask2&nbsp;=&nbsp;cv2.inRange(hsv_image,&nbsp;lower_red2,&nbsp;upper_red2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;red_mask&nbsp;=&nbsp;red_mask1&nbsp;+&nbsp;red_mask2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blue_mask&nbsp;=&nbsp;cv2.inRange(hsv_image,&nbsp;lower_blue,&nbsp;upper_blue)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;red_centroid&nbsp;=&nbsp;np.array(np.where(red_mask)).T.mean(axis=0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;blue_centroid&nbsp;=&nbsp;np.array(np.where(blue_mask)).T.mean(axis=0)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;red_centroid,&nbsp;blue_centroid
+                </div>
+            </div>
+
+            <div class="box6">
+                <div class="initial-text">
+                    Direction Calculation Settings:<br><br>
+Calculate the direction based on the angle starting from the east.<br>
+Return the direction corresponding to the specified main direction and its offset angle.
+                </div>
+                <div class="hover-text">
+                    def&nbsp;compute_direction(angle_from_east):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;0&nbsp;&lt;=&nbsp;angle_from_east&nbsp;&lt;&nbsp;90:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;f"East&nbsp;by&nbsp;South,&nbsp;{angle_from_east:.2f}°&nbsp;from&nbsp;East"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;90&nbsp;&lt;=&nbsp;angle_from_east&nbsp;&lt;&nbsp;180:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;f"South&nbsp;by&nbsp;West,&nbsp;{angle_from_east&nbsp;-&nbsp;90:.2f}°&nbsp;from&nbsp;South"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;180&nbsp;&lt;=&nbsp;angle_from_east&nbsp;&lt;&nbsp;270:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;f"West&nbsp;by&nbsp;North,&nbsp;{angle_from_east&nbsp;-&nbsp;180:.2f}°&nbsp;from&nbsp;West"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;270&nbsp;&lt;=&nbsp;angle_from_east&nbsp;&lt;&nbsp;360:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;f"North&nbsp;by&nbsp;East,&nbsp;{angle_from_east&nbsp;-&nbsp;270:.2f}°&nbsp;from&nbsp;North"
+                </div>
+            </div>
+
+            <div class="box5">
+                <div class="initial-text">
+                    Main Program Settings:<br><br>
+                    Load an image from the specified path.<br><br>
+                    If the image is loaded successfully:<br>
+                    Detect the centroids of red and blue in the image.<br>
+                    Calculate the actual distance and direction between the two centroids, based on the ratio between pixels and actual distance.<br>
+                    Output the direction from the starting point to the end point. 
+                </div>
+                <div class="hover-text">
+                    if&nbsp;__name__&nbsp;==&nbsp;"__main__":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;image_path&nbsp;=&nbsp;"E:\\AR_Wayfinding_Project\\assets\\Wayfinding_Schematic.png"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;image&nbsp;=&nbsp;load_image(image_path)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;image&nbsp;is&nbsp;not&nbsp;None:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;red_centroid,&nbsp;blue_centroid&nbsp;=&nbsp;detect_red_and_blue_centroids(image)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixel_to_meter_ratio&nbsp;=&nbsp;0.1&nbsp;&nbsp;#&nbsp;10&nbsp;pixels&nbsp;=&nbsp;1&nbsp;meter<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dx&nbsp;=&nbsp;blue_centroid[1]&nbsp;-&nbsp;red_centroid[1]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dy&nbsp;=&nbsp;blue_centroid[0]&nbsp;-&nbsp;red_centroid[0]<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;angle_with_horizontal&nbsp;=&nbsp;np.degrees(np.arctan2(dy,&nbsp;dx))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adjusted_angle&nbsp;=&nbsp;(angle_with_horizontal&nbsp;+&nbsp;360)&nbsp;%&nbsp;360&nbsp;&nbsp;#&nbsp;Ensure&nbsp;angle&nbsp;is&nbsp;positive<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixel_distance&nbsp;=&nbsp;np.sqrt(dx&nbsp;**&nbsp;2&nbsp;+&nbsp;dy&nbsp;**&nbsp;2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;real_world_distance&nbsp;=&nbsp;pixel_distance&nbsp;*&nbsp;pixel_to_meter_ratio<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Direction&nbsp;from&nbsp;start&nbsp;to&nbsp;end&nbsp;point:&nbsp;{compute_direction(adjusted_angle)}")
+                </div>
+            </div>
+            </div>
+
+            <div id="7-4">
+                <h2 class="second-sub-title">7.4 Main Code Structure</h2>
+
+            <div class="box7">
+                <div class="initial-text">
+                    Imported Libraries and Modules:<br><br>
+cv2 (OpenCV): For image processing and computer vision functionalities.<br>
+numpy (np): For numerical computations and multidimensional array manipulations.<br>
+pytesseract: For extracting text from images.<br>
+config: Possibly a custom configuration file.<br>
+re: Python's regular expression library for string searching and manipulation.<br>
+os: Python's operating system interface library for interacting with the operating system.<br>
+sys: For accessing Python interpreter variables and interacting with it.
+                </div>
+                <div class="hover-text">
+                    import&nbsp;cv2<br>
+                    import&nbsp;numpy&nbsp;as&nbsp;np<br>
+                    import&nbsp;pytesseract<br>
+                    import&nbsp;config<br>
+                    import&nbsp;re<br>
+                    import&nbsp;os<br>
+                    import&nbsp;sys                     
+                </div>
+            </div>
+
+            <div class="box8">
+                <div class="initial-text">
+                    Configuration and Tesseract Setup:<br><br>
+                    Read Configuration: Reads the configuration from the config.txt file and updates the attributes of the config module.<br>
+                    This function is called before other code execution to ensure the configuration is correctly used in other parts of the program.<br>
+                    Tesseract Path Setup: Sets the Tesseract command path according to the path in the config module.                                       
+                </div>
+                <div class="hover-text">
+                    def&nbsp;read_config():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;with&nbsp;open("config.txt",&nbsp;"r")&nbsp;as&nbsp;f:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lines&nbsp;=&nbsp;f.readlines()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;line&nbsp;in&nbsp;lines:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key,&nbsp;value&nbsp;=&nbsp;line.strip().split("=")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;=&nbsp;value.strip("\"")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;key&nbsp;in&nbsp;config.__dict__:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config.__dict__[key]&nbsp;=&nbsp;value<br><br>
+read_config()<br><br>
+#&nbsp;Setting&nbsp;Tesseract&nbsp;path<br>
+pytesseract.pytesseract.tesseract_cmd&nbsp;=&nbsp;config.TESSERACT_CMD_PATH
+                </div>
+            </div>
+
+            <div class="box7">
+                <div class="initial-text">
+                    Image Analysis and Device Tilt Detection Settings:<br><br>
+                    Calculate Frame Brightness:<br>
+                    Convert the image frame to grayscale format.<br>
+                    Return the average brightness of the frame.<br><br>
+                    Extract Tilt Angle:<br>
+                    Use regular expressions to extract the tilt angle from the provided text.<br>
+                    If a match is found, return the angle; otherwise, return 0.<br><br>
+                    Determine Phone Position:<br>
+                    Judge the phone's position based on the upper and lower limits in the config module.<br>
+                    If the tilt angle is within the specified range, return "UP"; otherwise, return "DOWN".  
+                </div>
+                <div class="hover-text">
+                    def&nbsp;calculate_frame_brightness(frame):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"""Calculate&nbsp;the&nbsp;average&nbsp;brightness&nbsp;of&nbsp;a&nbsp;frame."""<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gray&nbsp;=&nbsp;cv2.cvtColor(frame,&nbsp;cv2.COLOR_BGR2GRAY)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;np.mean(gray)<br><br>
+def&nbsp;extract_tilt_angle(text):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;match&nbsp;=&nbsp;re.search(r"Tilt:&nbsp;(\d+\.\d+|\d+)",&nbsp;text)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;match:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;float(match.group(1))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0&nbsp;&nbsp;#&nbsp;If&nbsp;no&nbsp;match&nbsp;is&nbsp;found,&nbsp;return&nbsp;0<br><br>
+def&nbsp;determine_phone_position(tilt_angle):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;config.SCREEN_UP_MIN&nbsp;&lt;=&nbsp;tilt_angle&nbsp;&lt;=&nbsp;config.SCREEN_UP_MAX:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;"UP"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;"DOWN"
+                </div>
+            </div>
+
+            <div class="box8">
+                <div class="initial-text">
+                    Direction to Angle Conversion Settings:<br><br>
+From Direction to Angle:<br>
+Parse the primary and secondary directions from the given direction string.<br>
+Attempt to extract the offset angle from the string. If it fails, set the offset angle to 0.0.<br>
+Use the config.DIRECTION_MAPPING dictionary, combined with the parsed primary and secondary directions, to obtain the base angle.<br>
+Return the sum of the base angle plus the offset angle.
+                </div>
+                <div class="hover-text">
+                    def&nbsp;get_angle_from_direction(direction_str):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;parts&nbsp;=&nbsp;direction_str.split(",")<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;primary_dir&nbsp;=&nbsp;parts[0].split()[-3]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;secondary_dir&nbsp;=&nbsp;parts[0].split()[-1]<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Check&nbsp;if&nbsp;the&nbsp;string&nbsp;can&nbsp;be&nbsp;converted&nbsp;to&nbsp;a&nbsp;float<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;try:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;degree_offset&nbsp;=&nbsp;float(parts[1].split()[0].replace("°",&nbsp;""))<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;except&nbsp;ValueError:&nbsp;&nbsp;#&nbsp;if&nbsp;conversion&nbsp;fails,&nbsp;set&nbsp;degree_offset&nbsp;to&nbsp;0<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;degree_offset&nbsp;=&nbsp;0.0<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;angle&nbsp;=&nbsp;config.DIRECTION_MAPPING[f"{primary_dir}&nbsp;by&nbsp;{secondary_dir}"]&nbsp;+&nbsp;degree_offset<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;angle                      
+                </div>
+            </div>
+
+            <div class="box7">
+                <div class="initial-text">
+                    Direction and Angle Analysis Settings:<br><br>
+Get Angle Difference:<br>
+Calculate the difference between two angles.<br>
+Considering that angle values can be cyclical (0° to 360°), adjust the difference to ensure it's within the range of -180° to 180°.<br>
+Return the adjusted difference value.<br><br>
+Determine Direction:<br>
+Parse direction from the provided text using regular expressions.<br>
+If a match is found, calculate the difference between the angle parsed from the provided direction string and the user-input angle.<br>
+Based on the difference value and predefined ranges in the config module, determine the direction (forward, left, right, or backward).<br>
+If the text does not contain a matching direction or the direction cannot be determined, return the default direction.
+                </div>
+                <div class="hover-text">
+                    def&nbsp;get_angle_difference(angle1,&nbsp;angle2):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;diff&nbsp;=&nbsp;angle2&nbsp;-&nbsp;angle1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;diff&nbsp;&gt;&nbsp;180:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diff&nbsp;-=&nbsp;360<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;diff&nbsp;&lt;&nbsp;-180:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diff&nbsp;+=&nbsp;360<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;diff<br><br>
+def&nbsp;determine_orientation(text,&nbsp;user_input_angle):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;match&nbsp;=&nbsp;re.search(r"Direction.*?from&nbsp;(South|North)",&nbsp;text)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;match:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;angle_from_frame&nbsp;=&nbsp;get_angle_from_direction(match.group())<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;angle_difference&nbsp;=&nbsp;get_angle_difference(user_input_angle,&nbsp;angle_from_frame)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;config.FRONT_MIN&nbsp;&lt;=&nbsp;angle_difference&nbsp;&lt;=&nbsp;config.FRONT_MAX:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;"FRONT"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;(config.LEFT_MIN&nbsp;&lt;=&nbsp;angle_difference&nbsp;&lt;=&nbsp;config.LEFT_MAX):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;"LEFT"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;(config.RIGHT_MIN&nbsp;&lt;=&nbsp;angle_difference&nbsp;&lt;=&nbsp;config.RIGHT_MAX):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;"RIGHT"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;(config.BACK_MIN_1&nbsp;&lt;=&nbsp;angle_difference&nbsp;&lt;=&nbsp;config.BACK_MAX_1)&nbsp;or&nbsp;(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;config.BACK_MIN_2&nbsp;&lt;=&nbsp;angle_difference&nbsp;&lt;=&nbsp;config.BACK_MAX_2):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;"BACK"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;config.DEFAULT_ORIENTATION
+                </div>
+            </div>
+
+            <div class="box8">
+                <div class="initial-text">
+                    Image Overlay and Effect Application Settings:<br><br>
+Overlay Center Image:<br>
+If the crosshair or glow image is None, directly return the background image.<br>
+Resize the crosshair and glow image according to the size of the background image.<br>
+Adjust the color of the crosshair based on the time of day or night.<br>
+If needed, convert the green parts of the glow image to grayscale.<br>
+Adjust the transparency of the glow image according to the opacity value in the configuration.<br>
+Overlay the adjusted glow image and crosshair image at the center position on the background image.<br>
+Return the overlaid background image.
+                </div>
+                <div class="hover-text">
+                    def&nbsp;overlay_centered(bg_img,&nbsp;glow_img,&nbsp;crosshair_img,&nbsp;time_of_day,&nbsp;grayscale=False):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;crosshair_img&nbsp;is&nbsp;None&nbsp;or&nbsp;glow_img&nbsp;is&nbsp;None:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;bg_img<br>
+&nbsp;&nbsp;&nbsp;&nbsp;overlay_size&nbsp;=&nbsp;int(bg_img.shape[1]&nbsp;/&nbsp;2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;glow_size&nbsp;=&nbsp;int((127&nbsp;/&nbsp;120)&nbsp;*&nbsp;overlay_size)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Adjust&nbsp;crosshair&nbsp;color&nbsp;based&nbsp;on&nbsp;time&nbsp;of&nbsp;day<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Define&nbsp;a&nbsp;color&nbsp;range&nbsp;for&nbsp;selecting&nbsp;pixels<br>
+&nbsp;&nbsp;&nbsp;&nbsp;lower_bound&nbsp;=&nbsp;np.array([0,&nbsp;0,&nbsp;0,&nbsp;255])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;upper_bound&nbsp;=&nbsp;np.array([50,&nbsp;50,&nbsp;50,&nbsp;255])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mask&nbsp;=&nbsp;cv2.inRange(crosshair_img,&nbsp;lower_bound,&nbsp;upper_bound)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;time_of_day&nbsp;==&nbsp;"DAY":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crosshair_img&nbsp;=&nbsp;modify_crosshair_color(crosshair_img,&nbsp;config.CROSSHAIR_COLOR_DAY)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crosshair_img&nbsp;=&nbsp;modify_crosshair_color(crosshair_img,&nbsp;config.CROSSHAIR_COLOR_NIGHT)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;crosshair_img_resized&nbsp;=&nbsp;cv2.resize(crosshair_img,&nbsp;(overlay_size,&nbsp;overlay_size))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;glow_img_resized&nbsp;=&nbsp;cv2.resize(glow_img,&nbsp;(glow_size,&nbsp;glow_size))<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Apply&nbsp;grayscale&nbsp;effect&nbsp;to&nbsp;green&nbsp;regions&nbsp;of&nbsp;glow_img&nbsp;if&nbsp;required<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Apply&nbsp;grayscale&nbsp;effect&nbsp;only&nbsp;to&nbsp;green&nbsp;regions&nbsp;of&nbsp;glow_img&nbsp;if&nbsp;required<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;grayscale:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;green_mask&nbsp;=&nbsp;cv2.inRange(glow_img_resized,&nbsp;np.array([0,&nbsp;128,&nbsp;0,&nbsp;0]),&nbsp;np.array([128,&nbsp;255,&nbsp;128,&nbsp;255]))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;only_green&nbsp;=&nbsp;cv2.bitwise_and(glow_img_resized,&nbsp;glow_img_resized,&nbsp;mask=green_mask)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gray_green&nbsp;=&nbsp;cv2.cvtColor(only_green,&nbsp;cv2.COLOR_BGRA2GRAY)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gray_green_colored&nbsp;=&nbsp;cv2.cvtColor(gray_green,&nbsp;cv2.COLOR_GRAY2BGRA)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glow_img_resized[:,&nbsp;:,&nbsp;0:3]&nbsp;=&nbsp;glow_img_resized[:,&nbsp;:,&nbsp;0:3]&nbsp;-&nbsp;only_green[:,&nbsp;:,&nbsp;0:3]&nbsp;+&nbsp;gray_green_colored[:,&nbsp;:,&nbsp;0:3]<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;alpha_value&nbsp;=&nbsp;config.CROSSHAIR_GREEN_GLOW_DAY_ALPHA<br>
+&nbsp;&nbsp;&nbsp;&nbsp;glow_img_resized[:,&nbsp;:,&nbsp;3]&nbsp;=&nbsp;(alpha_value&nbsp;*&nbsp;glow_img_resized[:,&nbsp;:,&nbsp;3]).astype(np.uint8)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;y1_glow&nbsp;=&nbsp;(bg_img.shape[0]&nbsp;-&nbsp;glow_size)&nbsp;//&nbsp;2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y2_glow&nbsp;=&nbsp;y1_glow&nbsp;+&nbsp;glow_size<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x1_glow&nbsp;=&nbsp;(bg_img.shape[1]&nbsp;-&nbsp;glow_size)&nbsp;//&nbsp;2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x2_glow&nbsp;=&nbsp;x1_glow&nbsp;+&nbsp;glow_size<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;y1_crosshair&nbsp;=&nbsp;(bg_img.shape[0]&nbsp;-&nbsp;overlay_size)&nbsp;//&nbsp;2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y2_crosshair&nbsp;=&nbsp;y1_crosshair&nbsp;+&nbsp;overlay_size<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x1_crosshair&nbsp;=&nbsp;(bg_img.shape[1]&nbsp;-&nbsp;overlay_size)&nbsp;//&nbsp;2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x2_crosshair&nbsp;=&nbsp;x1_crosshair&nbsp;+&nbsp;overlay_size<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;alpha_glow&nbsp;=&nbsp;glow_img_resized[:,&nbsp;:,&nbsp;3]&nbsp;/&nbsp;255.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;c&nbsp;in&nbsp;range(3):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bg_img[y1_glow:y2_glow,&nbsp;x1_glow:x2_glow,&nbsp;c]&nbsp;=&nbsp;(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alpha_glow&nbsp;*&nbsp;glow_img_resized[:,&nbsp;:,&nbsp;c]&nbsp;+&nbsp;(1&nbsp;-&nbsp;alpha_glow)&nbsp;*&nbsp;bg_img[y1_glow:y2_glow,&nbsp;x1_glow:x2_glow,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c]).astype(np.uint8)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;alpha_crosshair&nbsp;=&nbsp;crosshair_img_resized[:,&nbsp;:,&nbsp;3]&nbsp;/&nbsp;255.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;c&nbsp;in&nbsp;range(3):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bg_img[y1_crosshair:y2_crosshair,&nbsp;x1_crosshair:x2_crosshair,&nbsp;c]&nbsp;=&nbsp;(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alpha_crosshair&nbsp;*&nbsp;crosshair_img_resized[:,&nbsp;:,&nbsp;c]&nbsp;+&nbsp;(1&nbsp;-&nbsp;alpha_crosshair)&nbsp;*&nbsp;bg_img[<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y1_crosshair:y2_crosshair,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x1_crosshair:x2_crosshair,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c]).astype(np.uint8)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Now&nbsp;blend&nbsp;the&nbsp;grayscale&nbsp;processed&nbsp;glow_img_resized&nbsp;with&nbsp;bg_img<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;bg_img
+                </div>
+            </div>
+
+            <div class="box7">
+                <div class="initial-text">
+                    Pixel Adjustment Settings:<br><br>
+                    Adjust Pixel Values:<br>
+                    If the pixel is fully transparent (alpha channel is 0), return the pixel as is.<br>
+                    Otherwise, return a new pixel with RGB values matching the target color, while keeping the alpha channel unchanged.  
+                </div>
+                <div class="hover-text">
+                    def&nbsp;adjust_pixel_value(pixel,&nbsp;target):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"""Adjusts&nbsp;the&nbsp;pixel&nbsp;value&nbsp;based&nbsp;on&nbsp;the&nbsp;target&nbsp;color."""<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;pixel[3]&nbsp;==&nbsp;0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;pixel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;(target[0],&nbsp;target[1],&nbsp;target[2],&nbsp;pixel[3])
+                </div>
+            </div>
+
+            <div class="box8">
+                <div class="initial-text">
+                    Crosshair Color Adjustment Settings:<br>
+                    <br>
+                    Modify Crosshair Color:<br>
+                    Convert the crosshair image to BGRA format to handle transparency.<br>
+                    Define a threshold to determine which pixels are close to black in color.<br>
+                    Calculate the average value of B, G, R channels for each pixel.<br>
+                    Create a mask based on the threshold and opacity to select pixels that are close to black and opaque.<br>
+                    Change the color of pixels selected by the mask to the target color.<br>
+                    Return the modified crosshair image. 
+                </div>
+                <div class="hover-text">
+                    def&nbsp;modify_crosshair_color(crosshair,&nbsp;target_color):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Convert&nbsp;to&nbsp;BGRA&nbsp;for&nbsp;transparency&nbsp;handling<br>
+&nbsp;&nbsp;&nbsp;&nbsp;crosshair&nbsp;=&nbsp;cv2.cvtColor(crosshair,&nbsp;cv2.COLOR_BGR2BGRA)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Define&nbsp;a&nbsp;threshold.&nbsp;Any&nbsp;pixel&nbsp;with&nbsp;an&nbsp;average&nbsp;value&nbsp;below&nbsp;this&nbsp;in&nbsp;all&nbsp;B,&nbsp;G,&nbsp;R&nbsp;channels&nbsp;will&nbsp;be&nbsp;considered&nbsp;"near&nbsp;black".<br>
+&nbsp;&nbsp;&nbsp;&nbsp;threshold&nbsp;=&nbsp;50<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Calculate&nbsp;the&nbsp;average&nbsp;of&nbsp;the&nbsp;B,&nbsp;G,&nbsp;R&nbsp;channels<br>
+&nbsp;&nbsp;&nbsp;&nbsp;avg_color&nbsp;=&nbsp;np.mean(crosshair[:,&nbsp;:,&nbsp;:3],&nbsp;axis=2)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Create&nbsp;a&nbsp;mask&nbsp;of&nbsp;pixels&nbsp;where&nbsp;the&nbsp;average&nbsp;B,&nbsp;G,&nbsp;and&nbsp;R&nbsp;values&nbsp;are&nbsp;below&nbsp;the&nbsp;threshold&nbsp;AND&nbsp;the&nbsp;pixel&nbsp;is&nbsp;not&nbsp;transparent<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mask&nbsp;=&nbsp;(avg_color&nbsp;<&nbsp;threshold)&nbsp;&amp;&nbsp;(crosshair[:,&nbsp;:,&nbsp;3]&nbsp;>&nbsp;0)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Change&nbsp;color&nbsp;of&nbsp;the&nbsp;masked&nbsp;pixels<br>
+&nbsp;&nbsp;&nbsp;&nbsp;crosshair[mask]&nbsp;=&nbsp;target_color<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;crosshair
+                </div>
+            </div>
+
+            <div class="box7">
+                <div class="initial-text">
+                    Overlaying and Color Adjustment for Arrows:<br><br>
+                    Overlay Arrow:<br>
+                    
+                    If the arrow image is None, return the background image directly.<br>
+                    Determine the vertical position ratio and width ratio based on the type of arrow (left, right, or turning arrow).<br>
+                    Adjust the arrow's color based on whether it is day or night.<br>
+                    Resize the arrow based on the width ratio.<br>
+                    Overlay the adjusted arrow image at the center of the background image.<br>
+                    Return the overlaid background image. 
+                </div>
+                <div class="hover-text">
+                    def&nbsp;overlay_arrow(bg_img,&nbsp;arrow_img,&nbsp;time_of_day,&nbsp;arrow_left_img,&nbsp;arrow_right_img,&nbsp;arrow_turnaround_img):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;arrow_img&nbsp;is&nbsp;None:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;bg_img<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Determine&nbsp;the&nbsp;type&nbsp;of&nbsp;arrow&nbsp;and&nbsp;set&nbsp;the&nbsp;vertical&nbsp;position&nbsp;ratio<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;np.array_equal(arrow_img,&nbsp;arrow_left_img):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vertical_position_ratio&nbsp;=&nbsp;config.ARROW_LEFT_VERTICAL_POSITION_RATIO<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width_ratio&nbsp;=&nbsp;config.ARROW_LEFT_WIDTH_RATIO<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;time_of_day&nbsp;==&nbsp;"DAY":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrow_img&nbsp;=&nbsp;modify_crosshair_color(arrow_img,&nbsp;config.ARROW_LEFT_COLOR_DAY)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrow_img&nbsp;=&nbsp;modify_crosshair_color(arrow_img,&nbsp;config.ARROW_LEFT_COLOR_NIGHT)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;np.array_equal(arrow_img,&nbsp;arrow_right_img):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vertical_position_ratio&nbsp;=&nbsp;config.ARROW_RIGHT_VERTICAL_POSITION_RATIO<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width_ratio&nbsp;=&nbsp;config.ARROW_RIGHT_WIDTH_RATIO<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;time_of_day&nbsp;==&nbsp;"DAY":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrow_img&nbsp;=&nbsp;modify_crosshair_color(arrow_img,&nbsp;config.ARROW_RIGHT_COLOR_DAY)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrow_img&nbsp;=&nbsp;modify_crosshair_color(arrow_img,&nbsp;config.ARROW_RIGHT_COLOR_NIGHT)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;np.array_equal(arrow_img,&nbsp;arrow_turnaround_img):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vertical_position_ratio&nbsp;=&nbsp;config.ARROW_TURNAROUND_VERTICAL_POSITION_RATIO<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width_ratio&nbsp;=&nbsp;config.ARROW_TURNAROUND_WIDTH_RATIO<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;time_of_day&nbsp;==&nbsp;"DAY":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrow_img&nbsp;=&nbsp;modify_crosshair_color(arrow_img,&nbsp;config.ARROW_TURNAROUND_COLOR_DAY)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arrow_img&nbsp;=&nbsp;modify_crosshair_color(arrow_img,&nbsp;config.ARROW_TURNAROUND_COLOR_NIGHT)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Resize&nbsp;arrow&nbsp;based&nbsp;on&nbsp;width&nbsp;ratio<br>
+&nbsp;&nbsp;&nbsp;&nbsp;width&nbsp;=&nbsp;int(bg_img.shape[1]&nbsp;*&nbsp;width_ratio)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;aspect_ratio&nbsp;=&nbsp;arrow_img.shape[1]&nbsp;/&nbsp;arrow_img.shape[0]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;height&nbsp;=&nbsp;int(width&nbsp;/&nbsp;aspect_ratio)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;arrow_img_resized&nbsp;=&nbsp;cv2.resize(arrow_img,&nbsp;(width,&nbsp;height))<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Position&nbsp;the&nbsp;arrow<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x1&nbsp;=&nbsp;(bg_img.shape[1]&nbsp;-&nbsp;width)&nbsp;//&nbsp;2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y1&nbsp;=&nbsp;int(bg_img.shape[0]&nbsp;*&nbsp;vertical_position_ratio)&nbsp;-&nbsp;(height&nbsp;//&nbsp;2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x2&nbsp;=&nbsp;x1&nbsp;+&nbsp;width<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y2&nbsp;=&nbsp;y1&nbsp;+&nbsp;height<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;alpha_arrow&nbsp;=&nbsp;arrow_img_resized[:,&nbsp;:,&nbsp;3]&nbsp;/&nbsp;255.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;c&nbsp;in&nbsp;range(3):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bg_img[y1:y2,&nbsp;x1:x2,&nbsp;c]&nbsp;=&nbsp;(<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alpha_arrow&nbsp;*&nbsp;arrow_img_resized[:,&nbsp;:,&nbsp;c]&nbsp;+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1&nbsp;-&nbsp;alpha_arrow)&nbsp;*&nbsp;bg_img[y1:y2,&nbsp;x1:x2,&nbsp;c]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;).astype(np.uint8)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;bg_img
+                </div>
+            </div>
+
+            <div class="box8">
+                <div class="initial-text">
+                    Overlay Transparent Image Settings:<br><br>
+                    Overlay Transparent Image:<br>
+                    
+                    Copy the background image to avoid modifying the original image.<br>
+                    If the background image is in 3-channel format, convert it to a 4-channel BGRA format.<br>
+                    If an overlay size is provided, adjust the size of the image to be overlaid.<br>
+                    Use a median filter to blur the alpha channel (transparency) of the image to create a mask.<br>
+                    Determine the area for the image overlay, ensuring it does not exceed the boundaries of the background image.<br>
+                    If the determined overlay area is invalid (e.g., width or height is zero), return the unmodified background image.<br>
+                    Merge the foreground of the image to be overlaid with the background of the background image using the mask.<br>
+                    Overlay the processed image at the specified location on the background image.<br>
+                    Convert the resulting image back to BGR format.<br>
+                    Return the overlaid image.    
+                </div>
+                <div class="hover-text">
+                    def&nbsp;overlay_transparent(background_img,&nbsp;img_to_overlay,&nbsp;x,&nbsp;y,&nbsp;overlay_size=None):<br><br>
+&emsp;&emsp;bg_img&nbsp;=&nbsp;background_img.copy()<br>
+&emsp;&emsp;#&nbsp;convert&nbsp;3&nbsp;channels&nbsp;to&nbsp;4&nbsp;channels<br>
+&emsp;&emsp;if&nbsp;bg_img.shape[2]&nbsp;==&nbsp;3:<br>
+&emsp;&emsp;&emsp;&emsp;bg_img&nbsp;=&nbsp;cv2.cvtColor(bg_img,&nbsp;cv2.COLOR_BGR2BGRA)<br><br>
+&emsp;&emsp;if&nbsp;overlay_size&nbsp;is&nbsp;not&nbsp;None:<br>
+&emsp;&emsp;&emsp;&emsp;img_to_overlay&nbsp;=&nbsp;cv2.resize(img_to_overlay.copy(),&nbsp;overlay_size)<br><br>
+&emsp;&emsp;b,&nbsp;g,&nbsp;r,&nbsp;a&nbsp;=&nbsp;cv2.split(img_to_overlay)<br>
+&emsp;&emsp;mask&nbsp;=&nbsp;cv2.medianBlur(a,&nbsp;5)<br>
+&emsp;&emsp;h,&nbsp;w,&nbsp;_&nbsp;=&nbsp;img_to_overlay.shape<br><br>
+&emsp;&emsp;#&nbsp;Ensure&nbsp;the&nbsp;coordinates&nbsp;do&nbsp;not&nbsp;go&nbsp;out&nbsp;of&nbsp;bounds<br>
+&emsp;&emsp;y1&nbsp;=&nbsp;max(int(y&nbsp;-&nbsp;h&nbsp;/&nbsp;2),&nbsp;0)<br>
+&emsp;&emsp;y2&nbsp;=&nbsp;min(int(y&nbsp;+&nbsp;h&nbsp;/&nbsp;2),&nbsp;bg_img.shape[0])<br>
+&emsp;&emsp;x1&nbsp;=&nbsp;max(int(x&nbsp;-&nbsp;w&nbsp;/&nbsp;2),&nbsp;0)<br>
+&emsp;&emsp;x2&nbsp;=&nbsp;min(int(x&nbsp;+&nbsp;w&nbsp;/&nbsp;2),&nbsp;bg_img.shape[1])<br><br>
+&emsp;&emsp;if&nbsp;(y2&nbsp;-&nbsp;y1)&nbsp;&lt;=&nbsp;0&nbsp;or&nbsp;(x2&nbsp;-&nbsp;x1)&nbsp;&lt;=&nbsp;0:<br>
+&emsp;&emsp;&emsp;&emsp;print(f"Invalid&nbsp;ROI&nbsp;dimensions.&nbsp;y1:&nbsp;{y1},&nbsp;y2:&nbsp;{y2},&nbsp;x1:&nbsp;{x1},&nbsp;x2:&nbsp;{x2}")<br>
+&emsp;&emsp;&emsp;&emsp;return&nbsp;background_img&nbsp;&nbsp;#&nbsp;Return&nbsp;the&nbsp;original&nbsp;image&nbsp;without&nbsp;overlaying<br><br>
+&emsp;&emsp;roi&nbsp;=&nbsp;bg_img[y1:y2,&nbsp;x1:x2]<br><br>
+&emsp;&emsp;if&nbsp;roi.shape[:2]&nbsp;!&nbsp;=&nbsp;mask.shape:<br>
+&emsp;&emsp;&emsp;&emsp;mask&nbsp;=&nbsp;cv2.resize(mask,&nbsp;(roi.shape[1],&nbsp;roi.shape[0]))<br><br>
+&emsp;&emsp;img_to_overlay_resized&nbsp;=&nbsp;cv2.resize(img_to_overlay,&nbsp;(roi.shape[1],&nbsp;roi.shape[0]))<br>
+&emsp;&emsp;img1_bg&nbsp;=&nbsp;cv2.bitwise_and(roi.copy(),&nbsp;roi.copy(),&nbsp;mask=cv2.bitwise_not(mask))<br>
+&emsp;&emsp;img2_fg&nbsp;=&nbsp;cv2.bitwise_and(img_to_overlay_resized,&nbsp;img_to_overlay_resized,&nbsp;mask=mask)<br><br>
+&emsp;&emsp;bg_img[y1:y2,&nbsp;x1:x2]&nbsp;=&nbsp;cv2.add(img1_bg,&nbsp;img2_fg)<br><br>
+&emsp;&emsp;#&nbsp;convert&nbsp;4&nbsp;channels&nbsp;to&nbsp;4&nbsp;channels<br>
+&emsp;&emsp;bg_img&nbsp;=&nbsp;cv2.cvtColor(bg_img,&nbsp;cv2.COLOR_BGRA2BGR)<br><br>
+&emsp;&emsp;return&nbsp;bg_img
+                </div>
+            </div>
+
+            <div class="box7">
+                <div class="initial-text">
+                    User Image Overlay Settings:<br><br>
+                    Overlay User Image:<br>
+                    If the user image is None, return the original frame directly.<br>
+                    Get the dimensions of the frame.<br>
+                    Calculate the aspect ratio of the user image.<br>
+                    Set the maximum width and height of the user image to 1/3 of the video width.<br>
+                    Based on the maximum width and the aspect ratio, calculate the new width and height.<br>
+                    If the new height exceeds the maximum height, adjust the width and height accordingly.<br>
+                    Resize the user image.<br>
+                    Define the overlay position: horizontally centered, vertically at a distance of 1/14 of the frame height from the top of the frame.<br>
+                    Use the overlay_transparent function to overlay the resized user image at the specified location.<br>
+                    Return the frame after overlaying. 
+                </div>
+                <div class="hover-text">
+                    def&nbsp;overlay_user_image(frame,&nbsp;user_image):<br>
+                    &emsp;&emsp;if&nbsp;user_image&nbsp;is&nbsp;None:<br>
+                    &emsp;&emsp;&emsp;&emsp;#&nbsp;print("User&nbsp;image&nbsp;is&nbsp;None.&nbsp;Skipping&nbsp;overlay.")<br>
+                    &emsp;&emsp;&emsp;&emsp;return&nbsp;frame<br><br>
+                    &emsp;&emsp;#&nbsp;Get&nbsp;frame&nbsp;dimensions<br>
+                    &emsp;&emsp;frame_h,&nbsp;frame_w,&nbsp;_&nbsp;=&nbsp;frame.shape<br><br>
+                    &emsp;&emsp;#&nbsp;Get&nbsp;the&nbsp;aspect&nbsp;ratio&nbsp;of&nbsp;the&nbsp;user&nbsp;image<br>
+                    &emsp;&emsp;aspect_ratio&nbsp;=&nbsp;user_image.shape[1]&nbsp;/&nbsp;user_image.shape[0]<br><br>
+                    &emsp;&emsp;#&nbsp;Set&nbsp;the&nbsp;maximum&nbsp;width&nbsp;and&nbsp;height&nbsp;to&nbsp;1/3&nbsp;of&nbsp;the&nbsp;video's&nbsp;width<br>
+                    &emsp;&emsp;max_width&nbsp;=&nbsp;frame_w&nbsp;//&nbsp;3<br>
+                    &emsp;&emsp;max_height&nbsp;=&nbsp;frame_w&nbsp;//&nbsp;3<br><br>
+                    &emsp;&emsp;#&nbsp;Calculate&nbsp;the&nbsp;new&nbsp;width&nbsp;and&nbsp;height&nbsp;while&nbsp;preserving&nbsp;the&nbsp;aspect&nbsp;ratio<br>
+                    &emsp;&emsp;new_w&nbsp;=&nbsp;max_width<br>
+                    &emsp;&emsp;new_h&nbsp;=&nbsp;int(new_w&nbsp;/&nbsp;aspect_ratio)<br><br>
+                    &emsp;&emsp;#&nbsp;If&nbsp;the&nbsp;new&nbsp;height&nbsp;exceeds&nbsp;the&nbsp;maximum&nbsp;height,&nbsp;adjust&nbsp;the&nbsp;width&nbsp;and&nbsp;height&nbsp;accordingly<br>
+                    &emsp;&emsp;if&nbsp;new_h&nbsp;>&nbsp;max_height:<br>
+                    &emsp;&emsp;&emsp;&emsp;new_h&nbsp;=&nbsp;max_height<br>
+                    &emsp;&emsp;&emsp;&emsp;new_w&nbsp;=&nbsp;int(new_h&nbsp;*&nbsp;aspect_ratio)<br><br>
+                    &emsp;&emsp;#&nbsp;Resize&nbsp;the&nbsp;image<br>
+                    &emsp;&emsp;resized_image&nbsp;=&nbsp;cv2.resize(user_image,&nbsp;(new_w,&nbsp;new_h))<br><br>
+                    &emsp;&emsp;#&nbsp;Define&nbsp;overlay&nbsp;position<br>
+                    &emsp;&emsp;x_center&nbsp;=&nbsp;frame_w&nbsp;//&nbsp;2<br>
+                    &emsp;&emsp;y_center&nbsp;=&nbsp;frame_h&nbsp;*&nbsp;2&nbsp;//&nbsp;14&nbsp;&nbsp;#&nbsp;the&nbsp;vertical&nbsp;center&nbsp;of&nbsp;the&nbsp;image&nbsp;should&nbsp;be&nbsp;1/14th&nbsp;from&nbsp;the&nbsp;top&nbsp;of&nbsp;the&nbsp;frame<br><br>
+                    &emsp;&emsp;return&nbsp;overlay_transparent(frame,&nbsp;resized_image,&nbsp;x_center,&nbsp;y_center)
+                       
+                </div>
+            </div>
+
+            <div class="box8">
+                <div class="initial-text">
+                    User Text Overlay Settings:<br><br>
+                    Overlay user text:<br>
+                    If the user text is empty or None, return the original frame directly.<br>
+                    Get the dimensions of the frame.<br>
+                    Define the font, size, color, and background color.<br>
+                    Get the size of the text.<br>
+                    Adjust the text position to be horizontally centered, and vertically 4/14th of the frame height from the top of the frame.<br>
+                    Draw a white background rectangle for the text.<br>
+                    Overlay the text on the frame.<br>
+                    Return the overlaid frame. 
+                </div>
+                <div class="hover-text">
+                    def&nbsp;overlay_user_text(frame,&nbsp;user_text):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;user_text&nbsp;is&nbsp;None&nbsp;or&nbsp;user_text&nbsp;==&nbsp;"":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;print("User&nbsp;text&nbsp;is&nbsp;empty&nbsp;or&nbsp;None.&nbsp;Skipping&nbsp;overlay.")<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;frame<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Get&nbsp;frame&nbsp;dimensions<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;frame_h,&nbsp;frame_w,&nbsp;_&nbsp;=&nbsp;frame.shape<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Define&nbsp;font,&nbsp;size,&nbsp;and&nbsp;color<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;font&nbsp;=&nbsp;cv2.FONT_HERSHEY_SIMPLEX<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;font_scale&nbsp;=&nbsp;0.9&nbsp;&nbsp;#&nbsp;Adjusted&nbsp;value&nbsp;to&nbsp;reduce&nbsp;the&nbsp;font&nbsp;size<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;font_thickness&nbsp;=&nbsp;2<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;color&nbsp;=&nbsp;(0,&nbsp;0,&nbsp;0)&nbsp;&nbsp;#&nbsp;Black&nbsp;text<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;background_color&nbsp;=&nbsp;(255,&nbsp;255,&nbsp;255)&nbsp;&nbsp;#&nbsp;White&nbsp;background<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Get&nbsp;text&nbsp;size<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;text_size&nbsp;=&nbsp;cv2.getTextSize(user_text,&nbsp;font,&nbsp;font_scale,&nbsp;font_thickness)[0]<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Adjust&nbsp;text&nbsp;position<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;text_x&nbsp;=&nbsp;(frame_w&nbsp;-&nbsp;text_size[0])&nbsp;//&nbsp;2<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;text_y&nbsp;=&nbsp;(frame_h&nbsp;*&nbsp;4&nbsp;//&nbsp;14)&nbsp;+&nbsp;text_size[1]&nbsp;+&nbsp;10&nbsp;&nbsp;#&nbsp;Adjusted&nbsp;position<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Draw&nbsp;a&nbsp;background&nbsp;rectangle&nbsp;for&nbsp;the&nbsp;text<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;rectangle_bgr&nbsp;=&nbsp;(255,&nbsp;255,&nbsp;255)&nbsp;&nbsp;#&nbsp;White&nbsp;rectangle<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;(text_width,&nbsp;text_height),&nbsp;_&nbsp;=&nbsp;cv2.getTextSize(user_text,&nbsp;font,&nbsp;font_scale,&nbsp;font_thickness)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Set&nbsp;the&nbsp;rectangle&nbsp;background&nbsp;to&nbsp;white<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;frame[text_y&nbsp;-&nbsp;text_height&nbsp;-&nbsp;10:text_y&nbsp;+&nbsp;10,&nbsp;text_x&nbsp;-&nbsp;10:text_x&nbsp;+&nbsp;text_width&nbsp;+&nbsp;10]&nbsp;=&nbsp;rectangle_bgr<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Overlay&nbsp;text&nbsp;on&nbsp;the&nbsp;frame<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;cv2.putText(frame,&nbsp;user_text,&nbsp;(text_x,&nbsp;text_y),&nbsp;font,&nbsp;font_scale,&nbsp;color,&nbsp;font_thickness,&nbsp;lineType=cv2.LINE_AA)<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;frame                     
+                </div>
+            </div>
+
+            <div class="box7">
+                <div class="initial-text">
+                    Main Function - Image Overlay with Glow Effect:<br><br>
+Main Overlay Function:<br>
+Grayscale effect is not used by default.<br>
+Open the video file specified in the configuration.<br>
+Load user's custom text from the configuration.<br>
+If the user image path specified in the configuration exists and is a supported format (.jpg or .png), load the user's custom image. Otherwise, print an error message.<br>
+If the video file cannot be opened, print an error message and return.<br>
+Get the frame rate of the video and set the XVID codec.<br>
+Initialize a video writer object to save the output video.<br>
+Load crosshair image, orange glow image, green glow image, and different directional arrow images.<br>
+Get the user input direction string from the configuration and convert it to angle value.<br>
+Initialize frame counter to 0.<br>
+Default direction has been recognized.<br>
+Default setting is "Day".<br>
+Initialize current arrow to None.
+                </div>
+                <div class="hover-text">
+                    def&nbsp;main_overlay_with_glow():<br>
+                    <br>
+                    &emsp;&emsp;grayscale_effect&nbsp;=&nbsp;False<br>
+                    &emsp;&emsp;cap&nbsp;=&nbsp;cv2.VideoCapture(config.VIDEO_PATH)<br>
+                    <br>
+                    &emsp;&emsp;#&nbsp;Load&nbsp;user's&nbsp;custom&nbsp;text<br>
+                    &emsp;&emsp;user_text&nbsp;=&nbsp;config.USER_TEXT<br>
+                    <br>
+                    &emsp;&emsp;#&nbsp;Load&nbsp;user's&nbsp;custom&nbsp;image<br>
+                    &emsp;&emsp;user_image&nbsp;=&nbsp;None<br>
+                    &emsp;&emsp;if&nbsp;os.path.exists(config.USER_IMAGE_PATH)&nbsp;and&nbsp;(<br>
+                    &emsp;&emsp;&emsp;&emsp;config.USER_IMAGE_PATH.endswith('.jpg')&nbsp;or&nbsp;config.USER_IMAGE_PATH.endswith('.png')):<br>
+                    &emsp;&emsp;&emsp;&emsp;user_image_temp&nbsp;=&nbsp;cv2.imread(config.USER_IMAGE_PATH)<br>
+                    &emsp;&emsp;&emsp;&emsp;if&nbsp;user_image_temp&nbsp;is&nbsp;not&nbsp;None:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;user_image&nbsp;=&nbsp;cv2.cvtColor(user_image_temp,&nbsp;cv2.COLOR_BGR2BGRA)<br>
+                    &emsp;&emsp;&emsp;&emsp;else:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print(f"Failed&nbsp;to&nbsp;load&nbsp;user&nbsp;image&nbsp;from:&nbsp;{config.USER_IMAGE_PATH}")<br>
+                    &emsp;&emsp;else:<br>
+                    &emsp;&emsp;&emsp;&emsp;print(f"User&nbsp;image&nbsp;path&nbsp;is&nbsp;either&nbsp;incorrect&nbsp;or&nbsp;not&nbsp;a&nbsp;supported&nbsp;format:&nbsp;{config.USER_IMAGE_PATH}")<br>
+                    <br>
+                    &emsp;&emsp;if&nbsp;not&nbsp;cap.isOpened():<br>
+                    &emsp;&emsp;&emsp;&emsp;print("Error&nbsp;opening&nbsp;video&nbsp;file!")<br>
+                    &emsp;&emsp;&emsp;&emsp;return<br>
+                    <br>
+                    &emsp;&emsp;fps&nbsp;=&nbsp;int(cap.get(cv2.CAP_PROP_FPS))&nbsp;&nbsp;#&nbsp;Get&nbsp;frames&nbsp;per&nbsp;second<br>
+                    &emsp;&emsp;fourcc&nbsp;=&nbsp;cv2.VideoWriter_fourcc(*'XVID')&nbsp;&nbsp;#&nbsp;Use&nbsp;XVID&nbsp;codec<br>
+                    &emsp;&emsp;out&nbsp;=&nbsp;cv2.VideoWriter(config.OUTPUT_VIDEO_PATH,&nbsp;fourcc,&nbsp;fps,&nbsp;(int(cap.get(3)),&nbsp;int(cap.get(4))))<br>
+                    <br>
+                    &emsp;&emsp;crosshair_img&nbsp;=&nbsp;cv2.imread(config.CROSSHAIR_PATH,&nbsp;-1)<br>
+                    &emsp;&emsp;orange_glow_img&nbsp;=&nbsp;cv2.imread(config.CROSSHAIR_ORANGE_GLOW_PATH,&nbsp;-1)<br>
+                    &emsp;&emsp;green_glow_img&nbsp;=&nbsp;cv2.imread(config.CROSSHAIR_GREEN_GLOW_PATH,&nbsp;-1)<br>
+                    &emsp;&emsp;arrow_left_img&nbsp;=&nbsp;cv2.imread(config.ARROW_LEFT_PATH,&nbsp;-1)<br>
+                    &emsp;&emsp;arrow_right_img&nbsp;=&nbsp;cv2.imread(config.ARROW_RIGHT_PATH,&nbsp;-1)<br>
+                    &emsp;&emsp;arrow_turnaround_img&nbsp;=&nbsp;cv2.imread(config.ARROW_TURNAROUND_PATH,&nbsp;-1)<br>
+                    <br>
+                    &emsp;&emsp;user_input_string&nbsp;=&nbsp;config.USER_DIRECTION_INPUT<br>
+                    &emsp;&emsp;user_input_angle&nbsp;=&nbsp;get_angle_from_direction(user_input_string)<br>
+                    <br>
+                    &emsp;&emsp;frame_count&nbsp;=&nbsp;0<br>
+                    <br>
+                    &emsp;&emsp;direction_recognized&nbsp;=&nbsp;True<br>
+                    <br>
+                    &emsp;&emsp;time_of_day&nbsp;=&nbsp;"DAY"&nbsp;&nbsp;#&nbsp;Default&nbsp;value<br>
+                    &emsp;&emsp;current_arrow&nbsp;=&nbsp;None<br>                      
+                </div>
+            </div>
+
+            <div class="box8">
+                <div class="initial-text">
+                    Main Function - Image Overlay with Glow Effect (Continued):<br><br>
+Processing the First Frame:<br>
+Read the first frame from the video.<br>
+If the read is successful:<br>
+Use Tesseract OCR to read the text on the frame.<br>
+Extract the tilt angle from the OCR output.<br>
+Determine the position of the phone based on the tilt angle.<br>
+Calculate the frame's brightness, and determine if it's "day" or "night" based on the brightness threshold.<br>
+Determine the direction from the OCR output.<br>
+If the direction is not recognized, the user's custom image and text are both set to None.<br>
+Determine if the direction has been recognized based on the OCR output and the default direction.<br>
+Select the correct glow image based on the direction.<br>
+Use the overlay_centered function to overlay the crosshair and glow effect.<br>
+Write the overlaid frame to the output video.<br>
+Select the arrow image to overlay based on the direction.
+                </div>
+                <div class="hover-text">
+                    #&nbsp;Initialize&nbsp;for&nbsp;the&nbsp;first&nbsp;frame<br>
+                    &emsp;&emsp;ret,&nbsp;frame&nbsp;=&nbsp;cap.read()<br>
+                    &emsp;&emsp;if&nbsp;ret:<br>
+                    &emsp;&emsp;&emsp;&emsp;tesseract_output&nbsp;=&nbsp;pytesseract.image_to_string(frame)<br>
+                    &emsp;&emsp;&emsp;&emsp;print(f"Frame&nbsp;{frame_count}&nbsp;OCR&nbsp;Output:&nbsp;{tesseract_output}")<br>
+                    <br>
+                    &emsp;&emsp;&emsp;&emsp;#&nbsp;Extract&nbsp;tilt&nbsp;angle<br>
+                    &emsp;&emsp;&emsp;&emsp;tilt_angle&nbsp;=&nbsp;extract_tilt_angle(tesseract_output)<br>
+                    &emsp;&emsp;&emsp;&emsp;print(f"Frame&nbsp;{frame_count}&nbsp;Tilt&nbsp;Angle:&nbsp;{tilt_angle}")<br>
+                    <br>
+                    &emsp;&emsp;&emsp;&emsp;phone_position&nbsp;=&nbsp;determine_phone_position(tilt_angle)<br>
+                    &emsp;&emsp;&emsp;&emsp;print(f"Frame&nbsp;{frame_count}&nbsp;Phone&nbsp;Position:&nbsp;{phone_position}")<br>
+                    <br>
+                    &emsp;&emsp;&emsp;&emsp;#&nbsp;Determine&nbsp;day&nbsp;or&nbsp;night<br>
+                    &emsp;&emsp;&emsp;&emsp;brightness&nbsp;=&nbsp;calculate_frame_brightness(frame)<br>
+                    &emsp;&emsp;&emsp;&emsp;if&nbsp;brightness&nbsp;&lt;=&nbsp;config.BRIGHTNESS_THRESHOLD:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;time_of_day&nbsp;=&nbsp;"NIGHT"<br>
+                    &emsp;&emsp;&emsp;&emsp;else:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;time_of_day&nbsp;=&nbsp;"DAY"<br>
+                    &emsp;&emsp;&emsp;&emsp;print(f"Frame&nbsp;{frame_count}&nbsp;Time&nbsp;of&nbsp;Day:&nbsp;{time_of_day}")<br>
+                    <br>
+                    &emsp;&emsp;&emsp;&emsp;orientation&nbsp;=&nbsp;determine_orientation(tesseract_output,&nbsp;user_input_angle)<br>
+                    &emsp;&emsp;&emsp;&emsp;print(f"Frame&nbsp;{frame_count}&nbsp;Orientation:&nbsp;{orientation}")<br>
+                    <br>
+                    &emsp;&emsp;&emsp;&emsp;if&nbsp;not&nbsp;direction_recognized:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;user_image&nbsp;=&nbsp;None<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;user_text&nbsp;=&nbsp;None<br>
+                    <br>
+                    &emsp;&emsp;&emsp;&emsp;if&nbsp;orientation&nbsp;==&nbsp;config.DEFAULT_ORIENTATION&nbsp;and&nbsp;"Direction"&nbsp;not&nbsp;in&nbsp;tesseract_output:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;direction_recognized&nbsp;=&nbsp;False<br>
+                    &emsp;&emsp;&emsp;&emsp;else:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;direction_recognized&nbsp;=&nbsp;True<br>
+                    <br>
+                    &emsp;&emsp;&emsp;&emsp;is_default_orientation&nbsp;=&nbsp;(orientation&nbsp;==&nbsp;config.DEFAULT_ORIENTATION)<br>
+                    &emsp;&emsp;&emsp;&emsp;if&nbsp;orientation&nbsp;==&nbsp;"FRONT":<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;current_overlay&nbsp;=&nbsp;green_glow_img<br>
+                    &emsp;&emsp;&emsp;&emsp;else:<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;current_overlay&nbsp;=&nbsp;orange_glow_img<br>
+                    <br>
+                    &emsp;&emsp;&emsp;&emsp;#&nbsp;Overlay&nbsp;the&nbsp;crosshair&nbsp;and&nbsp;glow&nbsp;using&nbsp;the&nbsp;overlay_centered&nbsp;function<br>
+                    &emsp;&emsp;&emsp;&emsp;overlaid_frame&nbsp;=&nbsp;overlay_centered(frame.copy(),&nbsp;current_overlay,&nbsp;crosshair_img,&nbsp;time_of_day,&nbsp;grayscale=False)<br>
+                    <br>
+                    &emsp;&emsp;&emsp;&emsp;out.write(overlaid_frame)<br>
+                    &emsp;&emsp;&emsp;&emsp;frame_count&nbsp;+&nbsp;1<br>
+                    <br>
+                    &emsp;&emsp;&emsp;&emsp;current_arrow&nbsp;=&nbsp;None<br>
+                    &emsp;&emsp;&emsp;&emsp;if&nbsp;orientation&nbsp;==&nbsp;"LEFT":<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;current_arrow&nbsp;=&nbsp;arrow_left_img<br>
+                    &emsp;&emsp;&emsp;&emsp;elif&nbsp;orientation&nbsp;==&nbsp;"RIGHT":<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;current_arrow&nbsp;=&nbsp;arrow_right_img<br>
+                    &emsp;&emsp;&emsp;&emsp;elif&nbsp;orientation&nbsp;==&nbsp;"BACK":<br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;current_arrow&nbsp;=&nbsp;arrow_turnaround_img                     
+                </div>
+            </div>
+
+            <div class="box7">
+                <div class="initial-text">
+                    Main Function - Image Overlay with Glow Effect (Continued):
+
+                    Process Remaining Frames:<br>
+                    Loop through each frame until the end of the video.<br>
+                    For each frame:<br>
+                    First, overlay the crosshair and glow effect.<br>
+                    Then, if there is an arrow, overlay the arrow.<br>
+                    If the direction is "FRONT", overlay the user-provided image and text.<br>
+                    Write the processed frame to the output video.<br><br>
+                    If the current frame number is a multiple of the video's fps (i.e., the first frame of every second):<br>
+                    Use Tesseract OCR to read text on the frame.<br>
+                    Extract the tilt angle from the OCR output and determine the phone's position.<br>
+                    Determine "DAY" or "NIGHT" based on the frame's brightness.<br>
+                    Determine the direction from the OCR output.<br>
+                    Decide which arrow image to overlay based on the direction.<br>
+                    If the phone position is "DOWN" and there is a related configuration setting, hide the arrow.<br>
+                    Decide which glow effect to use for overlay based on the direction and display conditions.<br>
+                    If the direction is not recognized, set the user's custom image and text to None.<br>
+                    If the direction is "FRONT" and the direction has been recognized, overlay the user-provided image and text.<br>
+                    Apply the grayscale effect only in the default orientation.<br>
+                    If the phone position is "DOWN" and there is a related configuration setting, hide the crosshair and/or glow effect.        
+                </div>
+                <div class="hover-text">
+                    #&nbsp;Continue&nbsp;for&nbsp;the&nbsp;rest&nbsp;of&nbsp;the&nbsp;frames<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;cap.isOpened():<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ret,&nbsp;frame&nbsp;=&nbsp;cap.read()<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Check&nbsp;if&nbsp;frame&nbsp;is&nbsp;None<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;frame&nbsp;is&nbsp;None:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;frame_count&nbsp;%&nbsp;fps&nbsp;==&nbsp;0:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;not&nbsp;ret:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;frame_count&nbsp;+=&nbsp;1<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Apply&nbsp;the&nbsp;overlay&nbsp;to&nbsp;the&nbsp;frame&nbsp;with&nbsp;or&nbsp;without&nbsp;grayscale&nbsp;as&nbsp;required<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;First,&nbsp;overlay&nbsp;the&nbsp;crosshair&nbsp;and&nbsp;glow&nbsp;on&nbsp;the&nbsp;frame.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overlaid_frame&nbsp;=&nbsp;overlay_centered(frame.copy(),&nbsp;current_overlay,&nbsp;crosshair_img,&nbsp;time_of_day,&nbsp;grayscale=grayscale_effect)<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Then,&nbsp;overlay&nbsp;the&nbsp;arrow&nbsp;if&nbsp;there&nbsp;is&nbsp;one.<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;current_arrow&nbsp;is&nbsp;not&nbsp;None:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overlaid_frame&nbsp;=&nbsp;overlay_arrow(overlaid_frame,&nbsp;current_arrow,&nbsp;time_of_day,&nbsp;arrow_left_img,&nbsp;arrow_right_img,&nbsp;arrow_turnaround_img)<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Only&nbsp;overlay&nbsp;the&nbsp;user&nbsp;image&nbsp;and&nbsp;text&nbsp;if&nbsp;orientation&nbsp;is&nbsp;FRONT<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;orientation&nbsp;==&nbsp;"FRONT":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overlaid_frame&nbsp;=&nbsp;overlay_user_image(overlaid_frame,&nbsp;user_image)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overlaid_frame&nbsp;=&nbsp;overlay_user_text(overlaid_frame,&nbsp;user_text)<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Write&nbsp;the&nbsp;frame&nbsp;to&nbsp;the&nbsp;output<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out.write(overlaid_frame)<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;frame_count&nbsp;%&nbsp;fps&nbsp;==&nbsp;0:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;OCR&nbsp;processing&nbsp;for&nbsp;the&nbsp;first&nbsp;frame&nbsp;every&nbsp;second&nbsp;based&nbsp;on&nbsp;fps<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tesseract_output&nbsp;=&nbsp;pytesseract.image_to_string(frame)<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Frame&nbsp;{frame_count}&nbsp;OCR&nbsp;Output:&nbsp;{tesseract_output}")<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Extract&nbsp;tilt&nbsp;angle<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tilt_angle&nbsp;=&nbsp;extract_tilt_angle(tesseract_output)<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;phone_position&nbsp;=&nbsp;determine_phone_position(tilt_angle)<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Determine&nbsp;day&nbsp;or&nbsp;night<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;brightness&nbsp;=&nbsp;calculate_frame_brightness(frame)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;brightness&nbsp;&lt;=&nbsp;config.BRIGHTNESS_THRESHOLD:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time_of_day&nbsp;=&nbsp;"NIGHT"<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time_of_day&nbsp;=&nbsp;"DAY"
+                    orientation&nbsp;=&nbsp;determine_orientation(tesseract_output,&nbsp;user_input_angle)<br><br>
+                    print(f"Frame&nbsp;{frame_count}&nbsp;Tilt&nbsp;Angle:&nbsp;{tilt_angle}")<br>
+                    print(f"Frame&nbsp;{frame_count}&nbsp;Phone&nbsp;Position:&nbsp;{phone_position}")<br>
+                    print(f"Frame&nbsp;{frame_count}&nbsp;Time&nbsp;of&nbsp;Day:&nbsp;{time_of_day}")<br>
+                    print(f"Frame&nbsp;{frame_count}&nbsp;Orientation:&nbsp;{orientation}")<br><br>
+                    if&nbsp;not&nbsp;direction_recognized:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;user_image&nbsp;=&nbsp;None<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;user_text&nbsp;=&nbsp;None<br><br>
+                    if&nbsp;"Direction"&nbsp;not&nbsp;in&nbsp;tesseract_output:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;direction_recognized&nbsp;=&nbsp;False<br>
+                    else:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;direction_recognized&nbsp;=&nbsp;True<br><br>
+                    #&nbsp;Determine&nbsp;the&nbsp;correct&nbsp;arrow&nbsp;to&nbsp;overlay&nbsp;based&nbsp;on&nbsp;orientation<br>
+                    if&nbsp;orientation&nbsp;==&nbsp;"LEFT":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;current_arrow&nbsp;=&nbsp;arrow_right_img<br>
+                    elif&nbsp;orientation&nbsp;==&nbsp;"RIGHT":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;current_arrow&nbsp;=&nbsp;arrow_left_img<br>
+                    elif&nbsp;orientation&nbsp;==&nbsp;"BACK":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;current_arrow&nbsp;=&nbsp;arrow_turnaround_img<br><br>
+                    if&nbsp;phone_position&nbsp;==&nbsp;"DOWN":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;orientation&nbsp;==&nbsp;"LEFT"&nbsp;and&nbsp;config.ARROW_LEFT_HIDE_ON_SCREEN_DOWN:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_arrow&nbsp;=&nbsp;None<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;orientation&nbsp;==&nbsp;"RIGHT"&nbsp;and&nbsp;config.ARROW_RIGHT_HIDE_ON_SCREEN_DOWN:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_arrow&nbsp;=&nbsp;None<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;orientation&nbsp;==&nbsp;"BACK"&nbsp;and&nbsp;config.ARROW_TURNAROUND_HIDE_ON_SCREEN_DOWN:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_arrow&nbsp;=&nbsp;None<br><br>
+                    #&nbsp;Decide&nbsp;which&nbsp;overlay&nbsp;to&nbsp;use&nbsp;based&nbsp;on&nbsp;orientation&nbsp;and&nbsp;display&nbsp;conditions<br>
+                    if&nbsp;not&nbsp;direction_recognized&nbsp;or&nbsp;orientation&nbsp;==&nbsp;config.CROSSHAIR_GREEN_GLOW_DISPLAY_CONDITION:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;current_overlay&nbsp;=&nbsp;green_glow_img<br>
+                    else:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;current_overlay&nbsp;=&nbsp;orange_glow_img<br><br>
+                    if&nbsp;not&nbsp;direction_recognized:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;user_image&nbsp;=&nbsp;None<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;user_text&nbsp;=&nbsp;None<br><br>
+                    #&nbsp;Overlay&nbsp;the&nbsp;crosshair&nbsp;and&nbsp;glow&nbsp;using&nbsp;the&nbsp;overlay_centered&nbsp;function<br>
+                    overlaid_frame&nbsp;=&nbsp;overlay_centered(frame.copy(),&nbsp;current_overlay,&nbsp;crosshair_img,&nbsp;time_of_day)<br><br>
+                    #&nbsp;If&nbsp;the&nbsp;orientation&nbsp;is&nbsp;"FRONT"&nbsp;and&nbsp;direction&nbsp;is&nbsp;recognized,&nbsp;overlay&nbsp;the&nbsp;user-provided&nbsp;image&nbsp;and&nbsp;text<br>
+                    if&nbsp;orientation&nbsp;==&nbsp;"FRONT"&nbsp;and&nbsp;direction_recognized:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;overlaid_frame&nbsp;=&nbsp;overlay_user_image(overlaid_frame,&nbsp;user_image)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;overlaid_frame&nbsp;=&nbsp;overlay_user_text(overlaid_frame,&nbsp;user_text)<br><br>
+                    #&nbsp;Apply&nbsp;grayscale&nbsp;effect&nbsp;for&nbsp;default&nbsp;orientation&nbsp;only<br>
+                    grayscale_effect&nbsp;=&nbsp;is_default_orientation<br><br>
+                    #&nbsp;Hide&nbsp;overlay&nbsp;if&nbsp;phone&nbsp;position&nbsp;is&nbsp;DOWN&nbsp;and&nbsp;corresponding&nbsp;setting&nbsp;is&nbsp;True<br>
+                    if&nbsp;phone_position&nbsp;==&nbsp;"DOWN":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;current_overlay&nbsp;is&nbsp;green_glow_img&nbsp;and&nbsp;config.CROSSHAIR_GREEN_GLOW_HIDE_ON_SCREEN_DOWN:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_overlay&nbsp;=&nbsp;None<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;current_overlay&nbsp;is&nbsp;orange_glow_img&nbsp;and&nbsp;config.CROSSHAIR_ORANGE_GLOW_HIDE_ON_SCREEN_DOWN:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_overlay&nbsp;=&nbsp;None<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;config.CROSSHAIR_HIDE_ON_SCREEN_DOWN:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;crosshair_img&nbsp;=&nbsp;None                                         
+                </div>
+            </div>
+
+            <div class="box8">
+                <div class="initial-text">
+                    Main Function - Image Overlay with Glow Effect (Conclusion):<br><br>
+                    Complete video processing:<br>
+                    Release the video capture object.<br>
+                    Release the video writing object.<br>
+                    Close all OpenCV windows.<br><br>
+                    Script Entry Point:<br>
+                    When the script is run as a standalone program, invoke the main_overlay_with_glow() function.   
+                </div>
+                <div class="hover-text">
+                    &nbsp;&nbsp;&nbsp;&nbsp;cap.release()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;out.release()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cv2.destroyAllWindows()<br><br>
+
+if&nbsp;__name__&nbsp;==&nbsp;"__main__":<br>
+&nbsp;&nbsp;&nbsp;&nbsp;main_overlay_with_glow()
+                </div>
+            </div>
+
+        
+            <!-- 根据需要可以继续复制更多的 .box 来创建更多方格 -->
+            </div>
+
+
+            <div id="7-5">
+                <h2 class="second-sub-title">7.5 Video Frame Annotation with Direction and Tilt Data Code Structure</h2>
+
+            <div class="box9">
+                <div class="initial-text">
+                    Code Function:<br>
+                    The program overlays text information on direction and tilt angle onto each video frame, which updates with the changing frames.<br><br>
+                    
+1.Import Libraries: <br>
+   'cv2': The OpenCV library for video processing and computer vision tasks.<br><br>
+
+2.File Paths: <br>
+   'input_video_path': Path to the input video file.<br>
+   'output_video_path': Path where the processed video will be saved.<br><br>
+
+3.Video Properties: <br>
+   Initializes a 'cv2.VideoCapture' object to read frames from the input video.<br>
+   Retrieves the video's width, height, and frame rate (FPS).<br>
+   Sets up a 'cv2.VideoWriter' with matching dimensions and FPS to write the processed frames. The 'fourcc' parameter specifies the codec for the output video (MP4 format).<br><br>
+
+4.Frame Count: <br>
+   Sets 'frames_count' to 87, representing 3 seconds of video at 29 frames per second.<br><br>
+
+5.Direction and Tilt Information: <br>
+   The script displays direction and tilt information on the video. It updates direction from -43 degrees to -90 degrees in the first half and from 90 degrees to 47 degrees in the second half. Tilt is adjusted from 80 degrees to 90 degrees in the first half and reversed in the second half.<br><br>
+
+6.Processing Loop: <br>
+   Processes each frame to update direction and tilt information based on the frame's position in the sequence.<br>
+   Calculates text size for overlay.<br>
+   Adds a semi-transparent rectangle as a background for text overlay.<br>
+   Overlays the direction and tilt information onto the video frames.<br>
+   Increments the frame number after processing each frame.<br>
+   Writes the processed frame to the output video file.<br><br>
+
+7.Finalization: <br>
+   Releases the 'cv2.VideoCapture' and 'cv2.VideoWriter' objects to close the video files properly.<br>
+   Outputs a message indicating the completion of the video processing.
+                </div>
+                <div class="hover-text">
+                    import&nbsp;cv2<br>
+                    import&nbsp;numpy&nbsp;as&nbsp;np<br><br>
+                    #&nbsp;Input&nbsp;and&nbsp;output&nbsp;file&nbsp;paths<br>
+                    input_video_path&nbsp;=&nbsp;'E:\\AR_Wayfinding_Project\\assets\\original\\1_turn&nbsp;right.mp4'<br>
+                    output_video_path&nbsp;=&nbsp;'E:\\AR_Wayfinding_Project\\assets\\original\\1_turn&nbsp;right_Processed.mp4'<br><br>
+                    #&nbsp;Open&nbsp;the&nbsp;video&nbsp;and&nbsp;get&nbsp;its&nbsp;properties<br>
+                    cap&nbsp;=&nbsp;cv2.VideoCapture(input_video_path)<br>
+                    width&nbsp;=&nbsp;int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))<br>
+                    height&nbsp;=&nbsp;int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))<br>
+                    fps&nbsp;=&nbsp;cap.get(cv2.CAP_PROP_FPS)<br>
+                    fourcc&nbsp;=&nbsp;cv2.VideoWriter_fourcc(*'mp4v')&nbsp;&nbsp;#&nbsp;mp4&nbsp;format<br>
+                    out&nbsp;=&nbsp;cv2.VideoWriter(output_video_path,&nbsp;fourcc,&nbsp;fps,&nbsp;(width,&nbsp;height))<br>
+                    frames_count&nbsp;=&nbsp;int(cap.get(cv2.CAP_PROP_FRAME_COUNT))<br><br>
+                    #&nbsp;Initialize&nbsp;variables<br>
+                    frames_count&nbsp;=&nbsp;29&nbsp;*&nbsp;3&nbsp;&nbsp;#&nbsp;3&nbsp;seconds,&nbsp;29&nbsp;frames&nbsp;per&nbsp;second<br>
+                    half_frames&nbsp;=&nbsp;frames_count&nbsp;//&nbsp;2<br><br>
+                    #&nbsp;For&nbsp;the&nbsp;first&nbsp;half,&nbsp;from&nbsp;-43&nbsp;to&nbsp;-90&nbsp;(or&nbsp;South&nbsp;by&nbsp;West,&nbsp;43&nbsp;to&nbsp;South&nbsp;by&nbsp;West,&nbsp;90)<br>
+                    start_angle_1&nbsp;=&nbsp;-43.0<br>
+                    end_angle_1&nbsp;=&nbsp;-90.0<br>
+                    angle_change_per_frame_1&nbsp;=&nbsp;(end_angle_1&nbsp;-&nbsp;start_angle_1)&nbsp;/&nbsp;half_frames<br><br>
+                    #&nbsp;Initialize&nbsp;variables&nbsp;for&nbsp;the&nbsp;second&nbsp;half<br>
+                    start_angle_2&nbsp;=&nbsp;90.0&nbsp;&nbsp;#&nbsp;Start&nbsp;at&nbsp;North&nbsp;by&nbsp;West,&nbsp;90.00&nbsp;degrees&nbsp;from&nbsp;North&nbsp;but&nbsp;displayed&nbsp;as&nbsp;West<br>
+                    end_angle_2&nbsp;=&nbsp;47.0&nbsp;&nbsp;#&nbsp;End&nbsp;at&nbsp;North&nbsp;by&nbsp;West,&nbsp;47.00&nbsp;degrees&nbsp;from&nbsp;North<br>
+                    angle_change_per_frame_2&nbsp;=&nbsp;(end_angle_2&nbsp;-&nbsp;start_angle_2)&nbsp;/&nbsp;half_frames
+                    #&nbsp;Initialize&nbsp;current_angle&nbsp;for&nbsp;the&nbsp;first&nbsp;half<br>
+current_angle&nbsp;=&nbsp;start_angle_1<br><br>
+#&nbsp;Initialize&nbsp;tilt&nbsp;variables&nbsp;for&nbsp;the&nbsp;first&nbsp;and&nbsp;second&nbsp;half<br>
+start_tilt_1&nbsp;=&nbsp;80.0&nbsp;&nbsp;#&nbsp;Starting&nbsp;from&nbsp;80<br>
+end_tilt_1&nbsp;=&nbsp;90.0&nbsp;&nbsp;#&nbsp;Ending&nbsp;at&nbsp;90<br>
+tilt_change_per_frame_1&nbsp;=&nbsp;(end_tilt_1&nbsp;-&nbsp;start_tilt_1)&nbsp;/&nbsp;half_frames<br><br>
+start_tilt_2&nbsp;=&nbsp;90.0&nbsp;&nbsp;#&nbsp;Starting&nbsp;from&nbsp;90<br>
+end_tilt_2&nbsp;=&nbsp;80.0&nbsp;&nbsp;#&nbsp;Ending&nbsp;at&nbsp;80<br>
+tilt_change_per_frame_2&nbsp;=&nbsp;(end_tilt_2&nbsp;-&nbsp;start_tilt_2)&nbsp;/&nbsp;half_frames<br><br>
+#&nbsp;Initialize&nbsp;current_tilt&nbsp;for&nbsp;the&nbsp;first&nbsp;half<br>
+current_tilt&nbsp;=&nbsp;start_tilt_1<br><br>
+frame_num&nbsp;=&nbsp;0&nbsp;&nbsp;#&nbsp;Initialize&nbsp;frame&nbsp;number<br><br>
+while&nbsp;cap.isOpened():<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ret,&nbsp;frame&nbsp;=&nbsp;cap.read()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;not&nbsp;ret:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;frame_num&nbsp;<&nbsp;half_frames:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;First&nbsp;half&nbsp;logic<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;current_angle&nbsp;==&nbsp;-90.0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;direction_info&nbsp;=&nbsp;"Direction:&nbsp;West"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;direction_info&nbsp;=&nbsp;f"Direction:&nbsp;South&nbsp;by&nbsp;West,&nbsp;{-current_angle:.2f}&nbsp;degrees&nbsp;from&nbsp;South"<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_angle&nbsp;+=&nbsp;angle_change_per_frame_1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_tilt&nbsp;+=&nbsp;tilt_change_per_frame_1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Re-initialize&nbsp;for&nbsp;the&nbsp;second&nbsp;half&nbsp;if&nbsp;just&nbsp;passed&nbsp;the&nbsp;first&nbsp;half<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;frame_num&nbsp;==&nbsp;half_frames:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_angle&nbsp;=&nbsp;start_angle_2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;current_tilt&nbsp;=&nbsp;start_tilt_2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Second&nbsp;half&nbsp;logic<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;current_angle&nbsp;==&nbsp;90.0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;direction_info&nbsp;=&nbsp;"Direction:&nbsp;West"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;direction
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Determine&nbsp;tilt&nbsp;description<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tilt_info&nbsp;=&nbsp;f"Tilt:&nbsp;{current_tilt:.2f}&nbsp;degrees"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(w_tilt,&nbsp;h_tilt),&nbsp;_&nbsp;=&nbsp;cv2.getTextSize(tilt_info,&nbsp;cv2.FONT_HERSHEY_SIMPLEX,&nbsp;0.5,&nbsp;2)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Calculate&nbsp;the&nbsp;total&nbsp;height&nbsp;needed&nbsp;for&nbsp;both&nbsp;texts&nbsp;and&nbsp;their&nbsp;backgrounds<br>
+&nbsp;&nbsp;&nbsp;&nbsp;total_height&nbsp;=&nbsp;h_dir&nbsp;+&nbsp;h_tilt&nbsp;+&nbsp;20<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Add&nbsp;a&nbsp;semi-transparent&nbsp;rectangle&nbsp;behind&nbsp;both&nbsp;texts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cv2.rectangle(frame,&nbsp;(5,&nbsp;5),&nbsp;(5&nbsp;+&nbsp;max(w_dir,&nbsp;w_tilt)&nbsp;+&nbsp;20,&nbsp;5&nbsp;+&nbsp;total_height),&nbsp;(255,&nbsp;255,&nbsp;255),&nbsp;-1)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Adjust&nbsp;the&nbsp;vertical&nbsp;position&nbsp;of&nbsp;the&nbsp;texts&nbsp;so&nbsp;they're&nbsp;centered&nbsp;in&nbsp;the&nbsp;rectangle<br>
+&nbsp;&nbsp;&nbsp;&nbsp;text_y_dir&nbsp;=&nbsp;5&nbsp;+&nbsp;h_dir&nbsp;+&nbsp;(h_dir&nbsp;//&nbsp;4)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;text_y_tilt&nbsp;=&nbsp;text_y_dir&nbsp;+&nbsp;h_tilt&nbsp;+&nbsp;10<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Add&nbsp;the&nbsp;direction&nbsp;and&nbsp;tilt&nbsp;texts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cv2.putText(frame,&nbsp;direction_info,&nbsp;(10,&nbsp;text_y_dir),&nbsp;cv2.FONT_HERSHEY_SIMPLEX,&nbsp;0.5,&nbsp;(0,&nbsp;0,&nbsp;0),&nbsp;1,&nbsp;cv2.LINE_AA)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cv2.putText(frame,&nbsp;tilt_info,&nbsp;(10,&nbsp;text_y_tilt),&nbsp;cv2.FONT_HERSHEY_SIMPLEX,&nbsp;0.5,&nbsp;(0,&nbsp;0,&nbsp;0),&nbsp;1,&nbsp;cv2.LINE_AA)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Update&nbsp;the&nbsp;frame_num<br>
+&nbsp;&nbsp;&nbsp;&nbsp;frame_num&nbsp;+=&nbsp;1<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Save&nbsp;the&nbsp;processed&nbsp;frame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;out.write(frame)<br><br>
+#&nbsp;Close&nbsp;video&nbsp;files<br>
+cap.release()<br>
+out.release()<br><br>
+print("Video&nbsp;processing&nbsp;completed.")
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Determine&nbsp;tilt&nbsp;description<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tilt_info&nbsp;=&nbsp;f"Tilt:&nbsp;{current_tilt:.2f}&nbsp;degrees"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(w_tilt,&nbsp;h_tilt),&nbsp;_&nbsp;=&nbsp;cv2.getTextSize(tilt_info,&nbsp;cv2.FONT_HERSHEY_SIMPLEX,&nbsp;0.5,&nbsp;2)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Calculate&nbsp;the&nbsp;total&nbsp;height&nbsp;needed&nbsp;for&nbsp;both&nbsp;texts&nbsp;and&nbsp;their&nbsp;backgrounds<br>
+&nbsp;&nbsp;&nbsp;&nbsp;total_height&nbsp;=&nbsp;h_dir&nbsp;+&nbsp;h_tilt&nbsp;+&nbsp;20<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Add&nbsp;a&nbsp;semi-transparent&nbsp;rectangle&nbsp;behind&nbsp;both&nbsp;texts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cv2.rectangle(frame,&nbsp;(5,&nbsp;5),&nbsp;(5&nbsp;+&nbsp;max(w_dir,&nbsp;w_tilt)&nbsp;+&nbsp;20,&nbsp;5&nbsp;+&nbsp;total_height),&nbsp;(255,&nbsp;255,&nbsp;255),&nbsp;-1)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Adjust&nbsp;the&nbsp;vertical&nbsp;position&nbsp;of&nbsp;the&nbsp;texts&nbsp;so&nbsp;they're&nbsp;centered&nbsp;in&nbsp;the&nbsp;rectangle<br>
+&nbsp;&nbsp;&nbsp;&nbsp;text_y_dir&nbsp;=&nbsp;5&nbsp;+&nbsp;h_dir&nbsp;+&nbsp;(h_dir&nbsp;//&nbsp;4)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;text_y_tilt&nbsp;=&nbsp;text_y_dir&nbsp;+&nbsp;h_tilt&nbsp;+&nbsp;10<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Add&nbsp;the&nbsp;direction&nbsp;and&nbsp;tilt&nbsp;texts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cv2.putText(frame,&nbsp;direction_info,&nbsp;(10,&nbsp;text_y_dir),&nbsp;cv2.FONT_HERSHEY_SIMPLEX,&nbsp;0.5,&nbsp;(0,&nbsp;0,&nbsp;0),&nbsp;1,&nbsp;cv2.LINE_AA)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cv2.putText(frame,&nbsp;tilt_info,&nbsp;(10,&nbsp;text_y_tilt),&nbsp;cv2.FONT_HERSHEY_SIMPLEX,&nbsp;0.5,&nbsp;(0,&nbsp;0,&nbsp;0),&nbsp;1,&nbsp;cv2.LINE_AA)<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Update&nbsp;the&nbsp;frame_num<br>
+&nbsp;&nbsp;&nbsp;&nbsp;frame_num&nbsp;+=&nbsp;1<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Save&nbsp;the&nbsp;processed&nbsp;frame<br>
+&nbsp;&nbsp;&nbsp;&nbsp;out.write(frame)<br><br>
+#&nbsp;Close&nbsp;video&nbsp;files<br>
+cap.release()<br>
+out.release()<br><br>
+print("Video&nbsp;processing&nbsp;completed.")
+                </div>
+            </div>
+            </div>
+
+            <div id="7-6">
+                <h2 class="second-sub-title">7.6 Image Analysis for Endpoint Detection and Direction Computation Code Structure</h2>
+
+            <div class="box10">
+                <div class="initial-text">
+                    This Python program utilizes the OpenCV and NumPy libraries, along with the KMeans module from scikit-learn (not directly used in the provided snippet), to process and analyze an image. It performs the following key functions:<br><br>
+
+                    1. Load Image: <br>
+                       The 'load_image' function is responsible for loading an image from a specified path. If the image cannot be loaded, an exception is thrown.<br><br>
+                    
+                    2. Detect Endpoints:  <br>
+                       The 'detect_endpoints' function processes the image to find the starting point and endpoints. It first converts the image to grayscale and applies adaptive thresholding to isolate regions of interest.<br>
+                       It uses 'cv2.findContours' to find contours in the thresholded image and sorts these contours by area to differentiate between the starting point and other endpoints.<br>
+                       The largest contour is assumed to be the starting point, for which the function calculates the centroid, presumed to be red in color (although the color is not explicitly detected in the code).<br>
+                       The remaining contours are considered endpoints, for which the function calculates centroids and colors, saving them for later use.<br><br>
+                    
+                    3.Compute Direction: <br>
+                       The `compute_direction` function determines the direction based on the angle from East. This function translates the angle into a cardinal direction description such as “East by South,” “South by West,” “West by North,” or “North by East.”<br><br>
+                    
+                    4. Compute Distances and Directions: <br>
+                       The 'compute_distances_and_directions' function calculates the distances and directions between the starting point and each endpoint. It uses basic two-dimensional coordinate geometry to determine the pixel distance and angle for each endpoint from the starting point.<br>
+                       The results are sorted by distance to process the endpoints from nearest to farthest.<br><br>
+                    
+                    5. Main Program: <br>
+                       The main program loads the image, then uses the aforementioned functions to detect the starting point and endpoints, and computes distances and directions.<br>
+                       It marks the starting point (with a red circle) and the endpoints on the image and draws lines between the starting point and each endpoint.<br>
+                      The program then prints the real-world distance for each endpoint (converted using a pixel-to-meter ratio) and its direction.<br>
+                        Finally, the processed image is displayed, and the program waits for a key press before destroying all windows.<br><br>   
+                </div>
+                <div class="hover-text">
+                    import&nbsp;cv2<br>
+import&nbsp;numpy&nbsp;as&nbsp;np<br>
+from&nbsp;sklearn.cluster&nbsp;import&nbsp;KMeans<br>
+<br><br>
+def&nbsp;load_image(image_path):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"""Load&nbsp;an&nbsp;image&nbsp;from&nbsp;a&nbsp;given&nbsp;path."""<br>
+&nbsp;&nbsp;&nbsp;&nbsp;image&nbsp;=&nbsp;cv2.imread(image_path)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;image&nbsp;is&nbsp;None:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;raise&nbsp;ValueError("Error:&nbsp;Could&nbsp;not&nbsp;load&nbsp;image!")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;image<br>
+<br><br>
+def&nbsp;detect_endpoints(image):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;red_centroid&nbsp;=&nbsp;None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;endpoint_centroids&nbsp;=&nbsp;[]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;endpoint_colors&nbsp;=&nbsp;[]<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Convert&nbsp;to&nbsp;grayscale&nbsp;and&nbsp;apply&nbsp;adaptive&nbsp;thresholding<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gray&nbsp;=&nbsp;cv2.cvtColor(image,&nbsp;cv2.COLOR_BGR2GRAY)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;thresh&nbsp;=&nbsp;cv2.adaptiveThreshold(gray,&nbsp;255,&nbsp;cv2.ADAPTIVE_THRESH_GAUSSIAN_C,&nbsp;cv2.THRESH_BINARY_INV,&nbsp;11,&nbsp;2)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Find&nbsp;contours&nbsp;in&nbsp;the&nbsp;thresholded&nbsp;image<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contours,&nbsp;_&nbsp;=&nbsp;cv2.findContours(thresh,&nbsp;cv2.RETR_EXTERNAL,&nbsp;cv2.CHAIN_APPROX_SIMPLE)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Sort&nbsp;contours&nbsp;by&nbsp;area&nbsp;(to&nbsp;distinguish&nbsp;between&nbsp;starting&nbsp;point&nbsp;and&nbsp;endpoints)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sorted_contours&nbsp;=&nbsp;sorted(contours,&nbsp;key=cv2.contourArea,&nbsp;reverse=True)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;The&nbsp;largest&nbsp;contour&nbsp;is&nbsp;the&nbsp;starting&nbsp;point<br>
+&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;=&nbsp;cv2.moments(sorted_contours[0])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cX&nbsp;=&nbsp;int(M["m10"]&nbsp;/&nbsp;M["m00"])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cY&nbsp;=&nbsp;int(M["m01"]&nbsp;/&nbsp;M["m00"])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;red_centroid&nbsp;=&nbsp;(cY,&nbsp;cX)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Remaining&nbsp;contours&nbsp;are&nbsp;endpoints<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;contour&nbsp;in&nbsp;sorted_contours[1:]:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;=&nbsp;cv2.moments(contour)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cX&nbsp;=&nbsp;int(M["m10"]&nbsp;/&nbsp;M["m00"])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cY&nbsp;=&nbsp;int(M["m01"]&nbsp;/&nbsp;M["m00"])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color&nbsp;=&nbsp;image[cY,&nbsp;cX]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endpoint_centroids.append((cY,&nbsp;cX))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endpoint_colors.append(tuple(color))<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;red_centroid,&nbsp;endpoint_centroids,&nbsp;endpoint_colors<br>
+<br><br>
+def&nbsp;compute_direction(angle_from_east):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;"""Compute&nbsp;the&nbsp;cardinal&nbsp;direction&nbsp;based&nbsp;on&nbsp;the&nbsp;angle&nbsp;from&nbsp;East."""<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;0&nbsp;&le;&nbsp;angle_from_east&nbsp;<&nbsp;90:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;f"East&nbsp;by&nbsp;South,&nbsp;{angle_from_east:.2f}&deg;&nbsp;from&nbsp;East"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;90&nbsp;&le;&nbsp;angle_from_east&nbsp;<&nbsp;180:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;f"South&nbsp;by&nbsp;West,&nbsp;{angle_from_east&nbsp;-&nbsp;90:.2f}&deg;&nbsp;from&nbsp;South"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;180&nbsp;&le;&nbsp;angle_from_east&nbsp;<&nbsp;270:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;f"West&nbsp;by&nbsp;North,&nbsp;{angle_from_east&nbsp;-&nbsp;180:.2f}&deg;&nbsp;from&nbsp;West"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elif&nbsp;270&nbsp;&le;&nbsp;angle_from_east&nbsp;<&nbsp;360:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;f"North&nbsp;by&nbsp;East,&nbsp;{angle_from_east&nbsp;-&nbsp;270:.2f}&deg;&nbsp;from&nbsp;North"
+                    def compute_distances_and_directions(red_centroid, endpoint_centroids):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;distances_and_directions = []<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;for endpoint in endpoint_centroids:<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dx = endpoint[1] - red_centroid[1]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dy = endpoint[0] - red_centroid[0]<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;angle_with_horizontal = np.degrees(np.arctan2(dy, dx))<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adjusted_angle = (angle_with_horizontal + 360) % 360<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixel_distance = np.sqrt(dx ** 2 + dy ** 2)<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;distances_and_directions.append((pixel_distance, adjusted_angle))<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;# Sort based on distance<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;sorted_distances_and_directions, sorted_endpoints = zip(*sorted(zip(distances_and_directions, endpoint_centroids)))<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;return sorted_endpoints, sorted_distances_and_directions<br>
+                    <br>
+                    <br>
+                    if __name__ == "__main__":<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;image_path = "E:\\AR_Wayfinding_Project\\assets\\Multitarget.png"<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;image = load_image(image_path)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;pixel_to_meter_ratio = 0.1<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;red_centroid, endpoint_centroids, endpoint_colors = detect_endpoints(image)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;sorted_endpoints, sorted_distances_and_directions = compute_distances_and_directions(red_centroid,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;endpoint_centroids)<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;# Mark the starting point (red)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;cv2.circle(image, (int(red_centroid[1]), int(red_centroid[0])), 10, (0, 0, 255), -1)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;print("Starting Point:")<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;print(f"Position: {red_centroid}")<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;for i, (endpoint, (distance, direction)) in enumerate(zip(sorted_endpoints, sorted_distances_and_directions)):<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Displaying the results on the image<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color = image[endpoint[0], endpoint[1]]<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2.circle(image, (int(endpoint[1]), int(endpoint[0])), 10, tuple(map(int, color)), -1)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cv2.line(image, (int(red_centroid[1]), int(red_centroid[0])), (int(endpoint[1]), int(endpoint[0])),<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tuple(map(int, color)), 2)<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Printing distances and directions<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;real_world_distance = distance * pixel_to_meter_ratio<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Endpoint {i + 1}:")<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Real-world distance from start: {real_world_distance} meters")<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Direction from start: {compute_direction(direction)}")<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;cv2.imshow('Processed Image', image)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;cv2.waitKey(0)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;cv2.destroyAllWindows()
+                                        
+                </div>
+            </div>
+
+            <!-- 根据需要可以继续复制更多的 .box 来创建更多方格 -->
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div id="main-content">   
+    <div id="chapter8">
+        <h2 class="sub-title">8 Thank you for viewing!💐 & Connect</h2>
+        <h2 class="second-sub-title">🙏 Thank you for taking the time to view such a long web page!<br></h2> 
+        <h2 class="second-sub-title">Connect</h2>
+<p class="text-content">     
+I'm very glad if you want to communicate with me! 👉
+<a href="mailto:oxsheron@gmail.com">oxsheron@gmail.com</a> <br><br>
+That's all, thank you! Wish you have a nice day! 🌞
+</p>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
