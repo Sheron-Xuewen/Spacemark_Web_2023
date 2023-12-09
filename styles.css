@@ -1282,3 +1282,7 @@ td:nth-child(1) {
     border-radius: 10px;         /* 圆角 */
     color: rgb(255, 255, 255)
 }
+
+a { /* 所有链接的默认样式 */
+    text-decoration: none; /* 去掉下划线 */
+}
